@@ -1,0 +1,3 @@
+# harroz
+
+Hyprland config
