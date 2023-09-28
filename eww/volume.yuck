@@ -1,5 +1,5 @@
 (defpoll vol-info :interval "100ms"
-  "amixer -D pulse sget Master | grep Left: | sed -E 's/.*\\[(.*)%\\] \\[(.*)\\]/[\\1, \"\\2\"]/g'"
+  "amixer sget Master | grep Left: | sed -E 's/.*\\[(.*)%\\] \\[(.*)\\]/[\\1, \"\\2\"]/g'"
   )
 
 (defvar show-volume-slider false)
@@ -42,14 +42,14 @@
               :value "${vol-info[0]}"
               :draw-value false
               :duration "1ms"
-              :onchange {vol-info[1] ==  "off" ? "amixer -D pulse set Master 1+ toggle && amixer -D pulse sset Master {}%" : "amixer -D pulse sset Master {}%"}
+              :onchange {vol-info[1] ==  "off" ? "amixer set Master 1+ toggle && amixer sset Master {}%" : "amixer sset Master {}%"}
               )
             )
           )
         )
       (button 
         :class {vol-info[1] == "off" ? "button mute" : "button"}
-        :onclick "amixer -D pulse set Master 1+ toggle"
+        :onclick "amixer set Master 1+ toggle"
         (label
           :class "icon"
           :text {

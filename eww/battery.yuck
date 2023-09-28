@@ -13,10 +13,9 @@
       :space-evenly false
       :spacing {show-battery-power == true ? 8 : 0}
       ; :tooltip "${batt[0]}%"
-      :class {
-        EWW_BATTERY.BAT0.status == 'Charging' ? 'battery bat-charging' : 
+      :class {EWW_BATTERY.BAT0.status == 'Charging' ? 'battery bat-charging' :
+        batt[0] < 50 ? 'battery bat-low' :
         batt[0] > 80 ? 'battery bat-full' : 
-        batt[0] < 50 ? 'battery bat-low' : 
         'battery bat-box' }
       (revealer
         :reveal show-battery-power
@@ -26,8 +25,7 @@
         )
       (label 
         :class "icon"
-        :text {EWW_BATTERY.BAT0.status == 'Charging' ?
-        "󰂄" :
+        :text {EWW_BATTERY.BAT0.status == 'Charging' ? "󰂄" :
         batt[0] > 90 ? " " :
         batt[0] > 75 ? " " :
         batt[0] > 50 ? " " :
