@@ -1,6 +1,5 @@
 (defpoll light-info :interval "100ms"
-  ; "echo '`light`//1' | bc"
-  "echo \"`light`\/1\" | bc"
+  "echo \"`light`/ 1\" | bc"
   )
 
 (defvar light-stat-timer 2)
@@ -11,7 +10,9 @@
   "VOLSTATTIMER=`eww get light-stat-timer`; if [ $VOLSTATTIMER -gt 0 ]; then eww update light-stat-timer=`expr $VOLSTATTIMER - 1`; else eww update light-stat-timer=2 && eww close light-stat; fi;"
   )
 
-(defwindow light-stat :exclusive true :monitor 0
+(defwindow light-stat 
+  :exclusive true
+  :monitor 0
   :stacking "overlay"
   :geometry (geometry
   :x "0%"
@@ -42,11 +43,9 @@
       :valign "start"
       :height 20
       :timeout "0.1s"
-      ; :width 72
+      :width 72
       :value "${light-info}"
       :draw-value false
       )
     )
   )
-
-
