@@ -12,3 +12,4 @@ link,confdir,conf
 /eww/workspace.yuck,/.config/eww/,workspace.yuck
 /dunst/dunstrc,/.config/dunst/,dunstrc
 /clight/clight.conf,/.config/,clight.conf
+/waybar/waybar-config.json,/.config/waybar/,config
