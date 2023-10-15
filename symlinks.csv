@@ -13,3 +13,4 @@ link,confdir,conf
 /dunst/dunstrc,/.config/dunst/,dunstrc
 /clight/clight.conf,/.config/,clight.conf
 /waybar/waybar-config.json,/.config/waybar/,config
+/electron/electron-flags.conf,/.config/,electron-flags.conf
