@@ -1,6 +1,6 @@
 (defpoll date
   :interval "5s"
-  ; "date '+%H:%M %b %d'"
+  :initial `{"dname": "Wednesday", "dnm": "Wed", "mn": "January", "m": "Jan", "d": "03", "yr": "2024", "hr": "02", "mi": "41", "sec": "44", "tz": "CST"}`
   "date '+{\"dname\": \"%A\", \"dnm\": \"%a\", \"mn\": \"%B\", \"m\": \"%b\", \"d\": \"%d\", \"yr\": \"%Y\", \"hr\": \"%H\", \"mi\": \"%M\", \"sec\": \"%S\", \"tz\": \"%Z\"}'"
 )
 
@@ -11,7 +11,7 @@
     :onhover "eww update show-fulldate=true"
     :onhoverlost "eww update show-fulldate=false"
     (box
-      :hexpander false
+      :hexpand true
       ; :haligh "start"
       :spacing 0
       ; :orientation "h"
@@ -21,7 +21,7 @@
         :reveal {show-fulldate ? false : true}
         :transition "slideleft"
         :duration "300ms"
-        :hexpander false
+        :hexpand false
         (label
           :text "${date.hr}:${date.mi} ${date.m} ${date.d}"
           )

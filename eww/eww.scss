@@ -4,14 +4,16 @@ $red: #e58b65;
 // * { all: unset; }
 
 .menubar {
-	all: unset;
+	// all: unset;
   font-family: $jetto; 
+	background: rgba(0, 0, 0, 0.0);
 	font-size: 18px;
 	color: #ffffff;
 
 	.layout-box {
 		padding: 2px 16px;
 		background: rgba(34, 34, 34, 0.75);
+		// width: 100%;
 	}
 	.chronic {
 		// background: yellow;
