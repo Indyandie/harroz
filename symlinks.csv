@@ -1,5 +1,7 @@
 link,confdir,conf
 /hypr/hyprland.conf,/.config/hypr/,hyprland.conf
+/hypr/hyprpaper/hyprpaper.conf,/.config/hypr/,hyprpaper.conf
+/wallpaper/ascending-waves.png,/.config/hypr/wallpaper/,wallpaper01.png
 /eww/hypreww.conf,/.config/hypr/,hypreww.conf
 /eww/battery.yuck,/.config/eww/,battery.yuck
 /eww/eww.yuck,/.config/eww/,eww.yuck
