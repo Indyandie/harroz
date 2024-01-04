@@ -146,6 +146,7 @@ $red: #e58b65;
 	background: rgba(34, 34, 34, 0.75);
 	padding: 0;
 	.box {
+		transition-property: all;
 		padding: 24px;
 
 		.icon {
