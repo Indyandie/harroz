@@ -2,15 +2,7 @@
   :interval "100ms"
   :initial '[0, "off"]'
   "amixer sget Master | grep Left: | sed -E 's/.*\\[(.*)%\\] \\[(.*)\\]/[\\1, \"\\2\"]/g'")
-  ; `amixer sget Master | grep Left: | sd ".*\[(\d+)%\].*\[(.+)\]" '[$1, "$2"]'`)
-  ; `amixer sget Master | grep Left: | sd '\[(\d+)%\]' '$1'`)
-  ; `echo [0, "off"]`)
 
-    ; "amixer sget Master | grep Left: | sd \".*\[(\d+)%\].*\[(.+)\]\" '[$1, \"$2\"]'")
-
-
-; amixer sget Master | grep Left: | sed -E 's/.*\\[(.*)%\\] \\[(.*)\\]/[$1, "$2"]/g'
-  ; "amixer sget Master | grep Left: | sed -E 's/.*\\[(.*)%\\] \\[(.*)\\]/[\\1, \"\\2\"]/g'"
 (defvar show-volume-slider false)
 
 (defvar volume-backup 50)
@@ -44,13 +36,12 @@
             :transition "slideleft"
             (scale
               :orientation "h"
-              :timeout "0.5s"
+              :timeout "500ms"
               :min 0
-              :max 101
+              :max 100
               :width 72
               :value "${vol-info[0]}"
               :draw-value false
-              :timeout "1ms"
               :onchange {vol-info[1] ==  "off" ? "amixer set Master 1+ toggle && amixer sset Master {}%" : "amixer sset Master {}%"}
               )
             )
@@ -74,20 +65,22 @@
   )
 
 
-(defvar vol-stat-timer 1)
+(defvar vol-stat-timer 0)
 
 (defpoll vol-stat-ticker
   :interval "1000ms"
   :run-while true
-  "VOLSTATTIMER=`eww get vol-stat-timer`; if [ $VOLSTATTIMER -gt 0 ]; then eww update vol-stat-timer=`expr $VOLSTATTIMER - 1`; else eww update vol-stat-timer=2 && eww close vol-stat; fi;"
+  "VOLSTATTIMER=`eww get vol-stat-timer`; if [ $VOLSTATTIMER -gt 0 ]; then eww update vol-stat-timer=`expr $VOLSTATTIMER - 1`; else eww update vol-stat-timer=0 && eww close vol-stat; fi;"
   )
 
-(defwindow vol-stat :exclusive true :monitor 0
-                    :stacking "overlay"
-                    :geometry (geometry
-                    :x "0%"
-                    :anchor "center center"
-                                )
+(defwindow vol-stat 
+  :exclusive true :monitor 0
+  :stacking "overlay"
+  :geometry 
+    (geometry
+      :x "0%"
+      :anchor "center center"
+      )
   (box
     :class "box"
     :orientation "v"
