@@ -3,7 +3,7 @@
 (defpoll batt
   :interval "5s"
   :initial '["40", "00:00:00"]'
-  `echo "[\`acpi | rg ".* [0-9]{3}%" | sd ".+ ([0-9]+)%.*" '$1'\`, "\`acpi | rg "[0-9:]{8}|charged|Full" | sd ".* (([0-9\:]{8})|(until charged)|(Full)).*" '"$1"' | sd "until charged" "charging"\`"]"`
+  `echo "[\`acpi | rg ".* [0-9]+%" | sd ".+ ([0-9]{2,})%.*" '$1' || echo 0\`, "\`acpi | rg "[0-9:]{8}|charged|Full" | sd ".* (([0-9\:]{8})|(until charged)|(Full)).*" '"$1"' | sd "until charged" "charging"\`"]"`
 )  
 
 (defwidget _battery []
