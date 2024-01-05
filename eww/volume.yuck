@@ -53,11 +53,11 @@
         (label
           :class "icon"
           :text {
-          vol-info[1] == "off" ? "󰝟" :
-          vol-info[0] >  66 ? "󰕾" :
-          vol-info[0] >  33 ? "󰖀" :
-          vol-info[0] > 0 ? "󰕿" :
-          "󰸈"
+          vol-info[1] == "off" ? "" :
+          vol-info[0] >  66 ? "" :
+          vol-info[0] >  33 ? "" :
+          vol-info[0] > 0 ? "" :
+          ""
           })
         )
       )
@@ -96,7 +96,7 @@
       :halign "center"
       :xalign 0.5
       :text {
-      vol-info[1] == "off" ? "󰝟" : "󰕾"
+      vol-info[1] == "off" ? "" : ""
       })
     (label 
       :visible false
