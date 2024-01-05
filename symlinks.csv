@@ -16,4 +16,5 @@ link,confdir,conf
 /clight/clight.conf,/.config/,clight.conf
 /waybar/waybar-config.json,/.config/waybar/,config
 /waybar/waybar-style.css,/.config/waybar/,style.css
+/wofi/wofi-style.css,/.config/wofi/,style.css
 /electron/electron-flags.conf,/.config/,electron-flags.conf

@@ -1,0 +1,48 @@
+window {
+  margin: 5px;
+  /*  border: 2px solid #333;
+  background-color: #333;
+*/
+}
+
+#input {
+  margin: 5px;
+  border: 2px solid #333;
+  background-color: #333;
+  font-size: 32px;
+}
+
+#inner-box {
+  margin: 5px;
+  /*  border: 2px solid #222;
+  background-color: #222;
+*/
+}
+
+#outer-box {
+  margin: 5px;
+  border: 2px solid #222;
+  background-color: #222;
+}
+
+#scroll {
+  margin: 5px;
+  /*  border: 2px solid #555;
+  background-color: #555;*/
+}
+
+#text {
+  margin: 5px;
+  font-size: 18px;
+  /* border: 2px solid #ddd;
+background-color: #ddd; */
+}
+
+
+/*#entry:selected {
+background-color: rgba(0,0,0,0);
+}*/
+
+#text:selected {
+  font-weight: bold;
+}
