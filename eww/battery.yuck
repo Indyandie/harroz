@@ -26,13 +26,13 @@
         )
       (label 
         :class "icon"
-        :text {EWW_BATTERY.BAT0.status == 'Charging' ? "󰂄" :
-        batt[0] > 90 ? " " :
-        batt[0] > 75 ? " " :
-        batt[0] > 50 ? " " :
-        batt[0] > 25 ? " " :
-        batt[0] > 10 ? " " :
-        "󰂃" }
+        :text {EWW_BATTERY.BAT0.status == 'Charging' ? "" :
+        batt[0] > 90 ? "" :
+        batt[0] > 75 ? "" :
+        batt[0] > 50 ? "" :
+        batt[0] > 25 ? "" :
+        batt[0] > 10 ? "" :
+        "" }
         )
       )
     )
