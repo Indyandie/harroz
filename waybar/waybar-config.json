@@ -1,10 +1,8 @@
 {
-  "layer": "bottom",
+  "layer": "top",
   "position": "bottom",
-  "start-hidden": true,
-  "modifier-reset": "press",
   "height": 48,
-  "spacing": 4,
+  "spacing": 12,
   "modules-left": [
     "hyprland/submap",
     "cpu",
@@ -15,7 +13,7 @@
     "hyprland/window"
   ],
   "modules-right": [
-    "tray",
+    "tray"
   ],
   "keyboard-state": {
     "capslock": true,
@@ -26,7 +24,7 @@
     }
   },
   "hyprland/submap": {
-    "format": "<span style=\"italic\">{}</span>"
+    "format": "<span fgalpha='25%' weight='bold' style='oblique'>{}</span>"
   },
   "tray": {
     "icon-size": 21,
@@ -34,17 +32,17 @@
     "tooltip": true
   },
   "cpu": {
-    "format": "{usage}% ",
+    "format": "{usage}% <span fgalpha='60%' color='#FFFFFF' rise='-4000' size='18pt'>󰍛</span>",
     "tooltip": false
   },
   "memory": {
-    "format": "{}% "
+    "format": "{}% <span fgalpha='60%' color='#FFFFFF' rise='-4000' size='18pt'>󰆼</span>"
   },
   "temperature": {
     "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C <span fgalpha='60%' color='#FFFFFF' rise='-4000' size='18pt'>{icon}</span>",
     "format-icons": [
-      ""
+      "󰈸"
     ]
   }
 }
