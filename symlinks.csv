@@ -12,6 +12,7 @@ link,confdir,conf
 /eww/date.yuck,/.config/eww/,date.yuck
 /eww/volume.yuck,/.config/eww/,volume.yuck
 /eww/workspace.yuck,/.config/eww/,workspace.yuck
+/eww/traybar.yuck,/.config/eww/,traybar.yuck
 /dunst/dunstrc,/.config/dunst/,dunstrc
 /clight/clight.conf,/.config/,clight.conf
 /waybar/waybar-config.json,/.config/waybar/,config
