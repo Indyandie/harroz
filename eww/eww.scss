@@ -4,8 +4,8 @@ $red: #e58b65;
 // * { all: unset; }
 
 .menubar {
-	// all: unset;
-  font-family: $jetto; 
+	all: unset;
+	font-family: $jetto;
 	background: rgba(0, 0, 0, 0.0);
 	font-size: 18px;
 	color: #ffffff;
@@ -15,18 +15,23 @@ $red: #e58b65;
 		background: rgba(34, 34, 34, 0.75);
 		// width: 100%;
 	}
+
 	.chronic {
 		// background: yellow;
 	}
+
 	.void {
 		// background: orange;
 	}
+
 	.system {
 		// background: blue;
 	}
 }
 
-.battery, .wifi, .volume {
+.battery,
+.wifi,
+.volume {
 	padding: 0;
 
 	.icon {
@@ -34,19 +39,22 @@ $red: #e58b65;
 	}
 }
 
-.volume.button{
+.volume.button {
 	background: red;
 }
 
 .battery {
 	// background: red;
 }
+
 .bat-charging {
 	color: #e5ca65;
 }
+
 .bat-full {
 	color: #83e565;
 }
+
 .bat-low {
 	color: $red;
 }
@@ -54,35 +62,41 @@ $red: #e58b65;
 .wifi {
 	// color: lightblue;
 	// background-color: yellow;
-	font-family: $jetto; 
+	font-family: $jetto;
 }
 
 .workspaces {
 	transition-property: all;
-	font-family: $jetto; 
+	font-family: $jetto;
 	font-size: 24px;
+
 	.wsp-box {
 		// dumb hack to fill up the edges
 		padding: 16px 100px;
 		background: rgba(200, 200, 200, 0.2);
 	}
+
 	.fullscreen {
 		// background: rgba(0, 0, 0, 0.8);
 		background: #333;
 	}
+
 	.wsp-btn {
 		padding: 0 16px;
 		border-radius: 16px;
 		border: 0;
 		background: rgba(17, 17, 17, 0.3);
 		opacity: .6;
-		.icon{
+
+		.icon {
 			font-size: 36px;
 		}
+
 		.name {
 			font-size: 16px;
 		}
 	}
+
 	.active-wsp {
 		color: #eee;
 		background: rgba(17, 17, 17, 0.2);
@@ -113,8 +127,9 @@ $red: #e58b65;
 
 	.button {
 		all: unset;
+
 		.icon {
-			font-family: $jetto; 
+			font-family: $jetto;
 		}
 	}
 }
@@ -141,10 +156,12 @@ $red: #e58b65;
 	padding: 0;
 }
 
-.vol-stat, .light-stat {
+.vol-stat,
+.light-stat {
 	all: unset;
 	background: rgba(34, 34, 34, 0.75);
 	padding: 0;
+
 	.box {
 		transition-property: all;
 		padding: 24px;
