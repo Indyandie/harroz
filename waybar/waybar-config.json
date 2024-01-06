@@ -1,50 +1,50 @@
 {
-    "layer": "bottom", // Waybar at top layer top|bottom
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "start-hidden": true,
-    "modifier-reset": "press",
-    "height": 36, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (8px)
-    // Choose the order of the modules
-    "modules-left": [
-        // "hyprland/workspaces", 
-        "hyprland/submap",
-        "cpu",
-        "memory",
-        "temperature"
-    ],
-    "modules-center": ["hyprland/window"],
-    "modules-right": [
-        "tray",
-    ],
-    "keyboard-state": {
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10,
-        "tooltip": true
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [""]
+  "layer": "bottom",
+  "position": "bottom",
+  "start-hidden": true,
+  "modifier-reset": "press",
+  "height": 48,
+  "spacing": 4,
+  "modules-left": [
+    "hyprland/submap",
+    "cpu",
+    "memory",
+    "temperature"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+  ],
+  "keyboard-state": {
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
     }
+  },
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "tooltip": true
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": [
+      ""
+    ]
+  }
 }
-
