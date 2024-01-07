@@ -1,5 +1,5 @@
 (defpoll light-info
-  :interval "100ms"
+  :interval "50ms"
   :initial 100.00
   "echo \"`light`/ 1\" | bc"
   )
@@ -7,7 +7,7 @@
 (defvar light-stat-timer 0)
 
 (defpoll light-stat-ticker
-  :interval "1000ms"
+  :interval "500ms"
   :initial 0
   :run-while true
   "LIGHTSTATTIMER=`eww get light-stat-timer`; if [ $LIGHTSTATTIMER -gt 0 ]; then eww update light-stat-timer=`expr $LIGHTSTATTIMER - 1`; else eww update light-stat-timer=0; eww close light-stat; fi;"
@@ -48,7 +48,7 @@
       :height 20
       ; :min 20
       ; :max 100
-      :timeout "400ms"
+      :timeout "10ms"
       :width 72
       :value "${light-info}"
       :draw-value false

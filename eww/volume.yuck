@@ -1,5 +1,5 @@
 (defpoll vol-info
-  :interval "100ms"
+  :interval "50ms"
   :initial '[0, "off"]'
   "amixer sget Master | grep Left: | sed -E 's/.*\\[(.*)%\\] \\[(.*)\\]/[\\1, \"\\2\"]/g'")
 
@@ -68,7 +68,7 @@
 (defvar vol-stat-timer 0)
 
 (defpoll vol-stat-ticker
-  :interval "1000ms"
+  :interval "500ms"
   :run-while true
   "VOLSTATTIMER=`eww get vol-stat-timer`; if [ $VOLSTATTIMER -gt 0 ]; then eww update vol-stat-timer=`expr $VOLSTATTIMER - 1`; else eww update vol-stat-timer=0 && eww close vol-stat; fi;"
   )
@@ -106,7 +106,7 @@
       :orientation "h"
       :valign "start"
       :height 20
-      :timeout "0.1s"
+      :timeout "10ms"
       ; :width 72
       :value "${vol-info[0]}"
       :draw-value false
