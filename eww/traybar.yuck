@@ -8,7 +8,7 @@
     ; :y 0
     ; :width "100%"
     :width "100%"
-    :height "28px"
+    :height "4px"
     :anchor "bottom center"
     )
   (eventbox

@@ -6,7 +6,7 @@
 
 ; main
 (defwindow menubar
-  :exclusive true
+  :exclusive false
   :monitor 0
   :stacking "overlay"
   :geometry (geometry 
@@ -14,7 +14,7 @@
     :y 0
     ; :width "100%"
     :width "100%"
-    :height "3px"
+    :height "4px"
     :anchor "top center"
     )
   (eventbox
