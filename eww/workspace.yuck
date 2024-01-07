@@ -1,6 +1,6 @@
-(defpoll activewindow
-  :interval "1s"
-  "hyprctl -j activewindow"
+(defpoll activeworkspace
+  :interval "500ms"
+  "hyprctl -j activeworkspace"
   )
 
 (defwindow workspaces
@@ -19,28 +19,26 @@
   )
 
 (defpoll hyprworkspaces
-  :interval "1s"
+  :interval "500ms"
   "hyprctl -j workspaces"
   )
 
-
-
 (defvar allworkspaces '[
-                      [1, "□", "■", "term", "terminal"],
-                      [2, "◯", "●", "web", "web browser"],
-                      [3, "▽", "▼", "des", "design"],
-                      [4, "◇", "◆", "fun", "games"],
-                      [5, "△", "▲", "sys", "system"],
-                      [6, "◦", "▪", "六", "roku"],
-                      [7, "◦", "▪", "七", "nana"],
-                      [8, "◦", "▪", "八", "hachi"],
-                      [9, "◦", "▪", "九", "nueve"],
-                      [0, "◦", "▪", "十", "diez"]
-                              ]')
+  [1, "□", "■", "term", "terminal"],
+  [2, "◯", "●", "web",  "web browser"],
+  [3, "▽", "▼", "des",  "design"],
+  [4, "◇", "◆", "fun",  "games"],
+  [5, "△", "▲", "sys",  "system"],
+  [6, "◦", "▪", "六",   "roku"],
+  [7, "◦", "▪", "七",   "nana"],
+  [8, "◦", "▪", "八",   "hachi"],
+  [9, "◦", "▪", "九",   "nueve"],
+  [10, "◦", "▪", "十",   "diez"]
+  ]')
 
 (defwidget _workspaces []
   (box
-    :class {activewindow.fullscreen ? "fullscreen wsp-box" : "wsp-box"}
+    :class {activeworkspace.hasfullscreen ? "fullscreen wsp-box" : "wsp-box"}
     :space-evenly false
     :spacing 32
     :height 48
@@ -51,7 +49,7 @@
         :active true
         :height 48
         :tooltip "${wsp[4]}"
-        :class {activewindow.workspace.id == wsp[0] ? "active-wsp wsp-btn" : "wsp-btn"} 
+        :class {activeworkspace.id == wsp[0] ? "active-wsp wsp-btn" : "wsp-btn"} 
         :onclick "hyprctl dispatch workspace ${wsp[0]} && eww close workspaces"
         (box
           :valign "center"
