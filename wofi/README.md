@@ -24,5 +24,6 @@ notify-send $id
 
 ```sh
 hyprctl client -j | jql
+hyprctl clients -j | jql '..|>{"class","workspace"}'
 ```
 
