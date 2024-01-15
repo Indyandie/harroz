@@ -2,6 +2,8 @@
 
 - [sourcehut](https://hg.sr.ht/~scoopta/wofi)
 - [styling](https://cloudninja.pw/docs/wofi.html)
+- [wofi(7)](https://man.archlinux.org/man/wofi.7.en)
+  - `man 7 wofi`
 
 ## TO DO
 
