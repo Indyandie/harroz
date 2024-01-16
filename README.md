@@ -45,3 +45,7 @@ Hyprland config
 
 - [Sway Notification Center](https://github.com/ErikReider/SwayNotificationCenter)
 - [mako](https://github.com/emersion/mako)
+
+### Media
+
+- [pamixer](https://github.com/cdemoulins/pamixer)
