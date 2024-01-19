@@ -1,0 +1,12 @@
+ignore-empty-password
+show-failed-attempts 
+
+daemonize
+show-keyboard-layout
+indicator-caps-lock
+
+color=00000095
+font=JetBrainsMono Nerd Font
+font-size=18
+
+indicator-radius=200
