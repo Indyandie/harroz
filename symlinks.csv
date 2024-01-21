@@ -16,6 +16,7 @@ link,confdir,conf
 /dunst/dunstrc,/.config/dunst/,dunstrc
 /clight/clight.conf,/.config/,clight.conf
 /swaylock/config,/.config/swaylock/,config
+/swaylock/swaylock.png,/.config/swaylock/,swaylock.png
 /swayidle/config,/.config/swayidle/,config
 /waybar/waybar-config.json,/.config/waybar/,config
 /waybar/waybar-style.css,/.config/waybar/,style.css

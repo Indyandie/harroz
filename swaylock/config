@@ -1,12 +1,51 @@
 ignore-empty-password
 show-failed-attempts
+indicator-idle-visible
 
 daemonize
 show-keyboard-layout
 indicator-caps-lock
 
 color=00000095
+image=~/.config/swaylock/swaylock.png
 font=JetBrainsMono Nerd Font
-font-size=18
+font-size=36
 
-indicator-radius=200
+indicator-radius=120
+line-color=00000090
+ring-color=FFFFFF50
+indicator-thickness=16
+key-hl-color=DDDDEE60
+bs-hl-color=FFDDEE40
+line-uses-inside
+text-color=FFFFFF90
+# line-uses-ring
+# separator-color # color between segments
+
+inside-color=EEEEEE30
+inside-clear-color=FFFFFF40
+
+line-clear-color=FFFFFF70
+ring-clear-color=FFFFFF60
+text-clear-color=000000
+
+line-ver-color=23a2FF70
+ring-ver-color=23a2FF70
+inside-ver-color=23a2FF70
+text-ver-color=FFFFFF75
+
+line-wrong-color=FF23a280
+ring-wrong-color=FF23a280
+inside-wrong-color=FF23a280
+text-wrong-color=FFFFFF
+
+line-caps-lock-color=EEda2380
+caps-lock-key-hl-color=FEec2980
+caps-lock-bs-hl-color=FFFF2995
+ring-caps-lock-color=EEda2370
+inside-caps-lock-color=EEda2360
+text-caps-lock-color=FFFFFF
+
+layout-bg-color=33333380
+# layout-border-color=ffffff
+layout-text-color=FDEDFD80
