@@ -1,7 +1,7 @@
 (defpoll light-info
   :interval "50ms"
   :initial 100.00
-  "echo \"`light`/ 1\" | bc"
+  'echo "`brightnessctl g`* 100/1023" | bc'
   )
 
 (defvar light-stat-timer 0)
