@@ -1,6 +1,9 @@
 link,confdir,conf
 /hypr/hyprland.conf,/.config/hypr/,hyprland.conf
 /hypr/hyprpaper/hyprpaper.conf,/.config/hypr/,hyprpaper.conf
+/hyprshade/hyprshade.toml,/.config/hypr/,hyprshade.toml
+/hyprshade/blue-light-filter.glsl,/.config/hypr/shaders/,blue-light-filter.glsl
+/hyprshade/vibrance.glsl,/.config/hypr/shaders/,vibrance.glsl
 /wallpaper/ascending-waves.png,/.config/hypr/wallpaper/,wallpaper01.png
 /eww/hypreww.conf,/.config/hypr/,hypreww.conf
 /eww/battery.yuck,/.config/eww/,battery.yuck
