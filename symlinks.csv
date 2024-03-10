@@ -1,6 +1,8 @@
 link,confdir,conf
 /hypr/hyprland.conf,/.config/hypr/,hyprland.conf
 /hypr/hyprpaper/hyprpaper.conf,/.config/hypr/,hyprpaper.conf
+/hypr/hyprlock/hyprlock.conf,/.config/hypr/,hyprlock.conf
+/hypr/hyprlock/hyprlock.png,/.config/hypr/wallpaper/,hyprlock.png
 /hyprshade/hyprshade.toml,/.config/hypr/,hyprshade.toml
 /hyprshade/blue-light-filter.glsl,/.config/hypr/shaders/,blue-light-filter.glsl
 /hyprshade/vibrance.glsl,/.config/hypr/shaders/,vibrance.glsl
@@ -18,8 +20,6 @@ link,confdir,conf
 /eww/traybar.yuck,/.config/eww/,traybar.yuck
 /dunst/dunstrc,/.config/dunst/,dunstrc
 /clight/clight.conf,/.config/,clight.conf
-/swaylock/config,/.config/swaylock/,config
-/swaylock/swaylock.png,/.config/swaylock/,swaylock.png
 /swayidle/config,/.config/swayidle/,config
 /waybar/waybar-config.json,/.config/waybar/,config
 /waybar/waybar-style.css,/.config/waybar/,style.css
