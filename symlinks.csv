@@ -1,5 +1,6 @@
 link,confdir,conf
 /hypr/hyprland.conf,/.config/hypr/,hyprland.conf
+/hypr/kurokula.conf,/.config/hypr/,kurokula.conf
 /hypr/hyprpaper/hyprpaper.conf,/.config/hypr/,hyprpaper.conf
 /hypr/hyprlock/hyprlock.conf,/.config/hypr/,hyprlock.conf
 /hypr/hyprlock/hyprlock.png,/.config/hypr/wallpaper/,hyprlock.png
