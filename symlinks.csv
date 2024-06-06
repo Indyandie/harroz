@@ -21,8 +21,6 @@ link,confdir,conf
 /eww/workspace.yuck,/.config/eww/,workspace.yuck
 /eww/traybar.yuck,/.config/eww/,traybar.yuck
 /dunst/dunstrc,/.config/dunst/,dunstrc
-/clight/clight.conf,/.config/,clight.conf
-/swayidle/config,/.config/swayidle/,config
 /waybar/waybar-config.json,/.config/waybar/,config
 /waybar/waybar-style.css,/.config/waybar/,style.css
 /wofi/wofi-style.css,/.config/wofi/,style.css
