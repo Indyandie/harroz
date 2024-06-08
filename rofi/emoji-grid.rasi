@@ -1,58 +1,17 @@
 configuration {
-	modes: "window,drun,run,ssh";
-	font: "mono 24";
+	font: "mono 12";
 	location: 0;
-	show-icons: true;
-	terminal: "alacritty";
-	drun-url-launcher: "xdg-open";
+	fixed-num-lines: true;
+	hover-select: true;
+/*	sort: false;*/
+/*	sorting-method: "normal";*/
+/*	case-sensitive: false;*/
+/*	cycle: true;*/
 /*	sidebar-mode: false;*/
-/*	window-thumbnail: false;*/
-/*	drun-use-desktop-cache: false;*/
-/*	drun-reload-desktop-cache: false;*/
-/*	normalize-match: false;*/
-/*	steal-focus: false;*/
-/*	application-fallback-icon: ;*/
-/*	refilter-timeout-limit: 300;*/
-/*	xserver-i300-workaround: false;*/
-/*	pid: "/run/user/1000/rofi.pid";*/
-/*	display-window: ;*/
-/*	display-run: ;*/
-/*	display-ssh: ;*/
-/*	display-drun: ;*/
-/*	display-combi: ;*/
-/*	display-keys: ;*/
-/*	display-filebrowser: ;*/
+/*	matching: "normal";*/
 }
 
 * {
-    spacing:                     2;
-    red:                         rgba ( 182, 96, 86, 100 % );
-    blue:                        rgba ( 104, 144, 215, 100 % );
-    foreground:                  rgba ( 0, 43, 54, 100 % );
-    background:                  rgba ( 253, 246, 227, 100 % );
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  var(background);
-    separatorcolor:              var(foreground);
-    urgent-foreground:           var(red);
-    alternate-urgent-background: var(lightbg);
-    background-color:            transparent;
-    border-color:                var(foreground);
-    normal-background:           var(background);
-    selected-urgent-background:  var(red);
-    alternate-active-background: var(lightbg);
-    alternate-normal-foreground: var(foreground);
-    urgent-background:           var(background);
-    selected-normal-foreground:  var(lightbg);
-    active-foreground:           var(blue);
-    selected-active-background:  var(blue);
-    active-background:           var(background);
-    selected-normal-background:  var(lightfg);
-    alternate-normal-background: var(lightbg);
-    selected-urgent-foreground:  var(background);
-    normal-foreground:           var(foreground);
-    alternate-urgent-foreground: var(red);
-    alternate-active-foreground: var(blue);
     kuro-red-normal: #d23e08;
     kuro-red-light: #ffb7b7;
     kuro-red-dark: #b66056;
@@ -96,22 +55,22 @@ window {
     anchor: north;
     y-offset: 100;
     x-offset: 100;
-    padding:          5;
+    padding:          0;
     background-color: @kuro-black-dark-al;
     border:           2;
     border-color: @kuro-white-dark-al;
 }
 
 element {
-    padding: 16px ;
+    padding: 4px ;
     cursor:  pointer;
-    spacing: 16px ;
+    spacing: 4px ;
     border:  0;
 }
 
 element-text {
     cursor:           inherit;
-    highlight:        bold underline #FFF;
+    highlight:        bold underline #fcffb8; // kuro-yellow-light
     vertical-align:   0.50;
 }
 
@@ -126,24 +85,20 @@ element.alternate.normal {
 }
 
 element selected.normal {
-	background-color: @kuro-red-dark;
-    text-color:       @kuro-white-light;
+	background-color: @kuro-yellow-dark;
+    text-color:       @kuro-black-dark;
 }
 
 element selected.active {
-    text-color: white;
+    text-color: @kuro-yellow-dark;
+    text-color:       @kuro-black-dark;
 }
 
-element-icon {
-    background-color: transparent;
-    size:             1.6em ;
-    cursor:           inherit;
-    text-color:       inherit;
-}
 mainbox {
     padding: 0;
     border:  0;
 }
+
 message {
     padding:      1px ;
     border:       2px dash 0px 0px ;
@@ -151,7 +106,7 @@ message {
 
 listview {
     padding:      2px 0px 0px ;
-    columns: 1;
+    columns: 3;
     lines: 7;
     scrollbar:    true;
     spacing:      2px ;
@@ -171,22 +126,22 @@ scrollbar {
 }
 
 inputbar {
-    padding:    24px ;
+    padding:    16px ;
     spacing:    0px ;
-    children:   [ "prompt","textbox-prompt-colon","entry"];
+    children:   ["entry"];
 }
 
 case-indicator {
     spacing:    0;
-    text-color: red;
+    text-color: @kuro-red-light;
 }
 
 entry {
     cursor:            pointer;
     spacing:           0;
     placeholder-color: @kuro-white-dark;
-    placeholder:       "Type here";
-    text-color: white;
+    placeholder:       "emoji";
+    text-color: @kuro-white-normal;
 }
 
 // drun
