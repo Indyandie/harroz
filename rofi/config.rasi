@@ -16,18 +16,9 @@ configuration {
     kuro-red-normal: #d23e08;
     kuro-red-light: #ffb7b7;
     kuro-red-dark: #b66056;
-    kuro-green-normal: #54ca74;
-    kuro-green-light: #c1ffae;
-    kuro-green-dark: #85b1a9;
     kuro-blue-normal: #2ab9ff;
     kuro-blue-light: #a1d9ff;
     kuro-blue-dark: #6890d7;
-    kuro-cyan-normal: #1ef9f5;
-    kuro-cyan-light: #8efff3;
-    kuro-cyan-dark: #60bebe;
-    kuro-magenta-normal: #ff50da;
-    kuro-magenta-light: #ffa2ed;
-    kuro-magenta-dark: #cc83bd;
     kuro-yellow-normal: #fff700;
     kuro-yellow-light: #fcffb8;
     kuro-yellow-dark: #dbbb43;
@@ -45,10 +36,6 @@ configuration {
     kuro-orange-normal: #e59605;
     kuro-orange-light: #ffc663;
     kuro-orange-dark: #ab7b4e;
-    kuro-brown-normal: #9d5918;
-    kuro-brown-light: #f9cfb9;
-    kuro-brown-dark: #837369;
-    kuro-brown-dark-aa: #837369aa;
 }
 
 window {
