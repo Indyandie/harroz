@@ -1,35 +1,17 @@
 configuration {
-	font: "mono 12";
+	font: "mono 14";
 	location: 0;
 	fixed-num-lines: true;
-	hover-select: true;
-/*	sort: false;*/
-/*	sorting-method: "normal";*/
-/*	case-sensitive: false;*/
-/*	cycle: true;*/
-/*	sidebar-mode: false;*/
-/*	matching: "normal";*/
 }
 
 * {
     kuro-red-normal: #d23e08;
     kuro-red-light: #ffb7b7;
     kuro-red-dark: #b66056;
-    kuro-green-normal: #54ca74;
-    kuro-green-light: #c1ffae;
-    kuro-green-dark: #85b1a9;
-    kuro-blue-normal: #2ab9ff;
-    kuro-blue-light: #a1d9ff;
-    kuro-blue-dark: #6890d7;
-    kuro-cyan-normal: #1ef9f5;
-    kuro-cyan-light: #8efff3;
-    kuro-cyan-dark: #60bebe;
-    kuro-magenta-normal: #ff50da;
-    kuro-magenta-light: #ffa2ed;
-    kuro-magenta-dark: #cc83bd;
     kuro-yellow-normal: #fff700;
     kuro-yellow-light: #fcffb8;
     kuro-yellow-dark: #dbbb43;
+    kuro-yellow-dark-al: #dbbb43cc;
     kuro-black-normal: #333333;
     kuro-black-light: #515151;
     kuro-black-dark: #141515;
@@ -38,16 +20,6 @@ configuration {
     kuro-white-light: #ffffff;
     kuro-white-dark: #94959b;
     kuro-white-dark-al: #94959b33;
-    kuro-purple-normal: #9e60ec;
-    kuro-purple-light: #a994ff;
-    kuro-purple-dark: #887aa3;
-    kuro-orange-normal: #e59605;
-    kuro-orange-light: #ffc663;
-    kuro-orange-dark: #ab7b4e;
-    kuro-brown-normal: #9d5918;
-    kuro-brown-light: #f9cfb9;
-    kuro-brown-dark: #837369;
-    kuro-brown-dark-aa: #837369aa;
 }
 
 window {
@@ -85,12 +57,12 @@ element.alternate.normal {
 }
 
 element selected.normal {
-	background-color: @kuro-yellow-dark;
+	background-color: @kuro-yellow-dark-al;
     text-color:       @kuro-black-dark;
 }
 
 element selected.active {
-    text-color: @kuro-yellow-dark;
+    text-color: @kuro-yellow-dark-al;
     text-color:       @kuro-black-dark;
 }
 
@@ -142,18 +114,5 @@ entry {
     placeholder-color: @kuro-white-dark;
     placeholder:       "emoji";
     text-color: @kuro-white-normal;
-}
-
-// drun
-prompt {
-    spacing:    0;
-    text-color: @kuro-yellow-dark;
-}
-
-textbox-prompt-colon {
-    margin:     0px 0.3000em 0 0;
-    expand:     false;
-    str:        ":";
-    text-color: @kuro-white-dark;
 }
 
