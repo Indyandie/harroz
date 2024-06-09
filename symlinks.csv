@@ -23,7 +23,6 @@ link,confdir,conf
 /dunst/dunstrc,/.config/dunst/,dunstrc
 /waybar/waybar-config.json,/.config/waybar/,config
 /waybar/waybar-style.css,/.config/waybar/,style.css
-/wofi/wofi-style.css,/.config/wofi/,style.css
 /rofi/config.rasi,/.config/rofi/,config.rasi
 /rofi/emoji-grid.rasi,/.config/rofi/,emoji-grid.rasi
 /electron/electron-flags.conf,/.config/,electron-flags.conf
