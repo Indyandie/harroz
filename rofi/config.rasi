@@ -5,11 +5,6 @@ configuration {
 	show-icons: true;
 	terminal: "alacritty";
 	drun-url-launcher: "xdg-open";
-/*	window-thumbnail: false;*/
-/*	normalize-match: false;*/
-/*	refilter-timeout-limit: 300;*/
-/*	display-window: ;*/
-/*	display-filebrowser: ;*/
 }
 
 * {
@@ -134,14 +129,14 @@ entry {
     cursor:            pointer;
     spacing:           0;
     placeholder-color: @kuro-white-dark;
-    placeholder:       "Type here";
+    placeholder:       "run app";
     text-color: white;
 }
 
 // drun
 prompt {
     spacing:    0;
-    text-color: @kuro-yellow-dark;
+    text-color: @kuro-red-normal;
 }
 
 textbox-prompt-colon {
@@ -150,4 +145,3 @@ textbox-prompt-colon {
     str:        ":";
     text-color: @kuro-white-dark;
 }
-

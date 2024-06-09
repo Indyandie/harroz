@@ -5,6 +5,10 @@ configuration {
 }
 
 * {
+    kuro-blue-normal: #2ab9ff;
+    kuro-blue-light: #a1d9ff;
+    kuro-blue-dark: #6890d7;
+    kuro-blue-dark-al: #6890d788;
     kuro-red-normal: #d23e08;
     kuro-red-light: #ffb7b7;
     kuro-red-dark: #b66056;
@@ -57,12 +61,12 @@ element.alternate.normal {
 }
 
 element selected.normal {
-	background-color: @kuro-yellow-dark-al;
-    text-color:       @kuro-black-dark;
+	background-color: @kuro-blue-dark-al;
+    text-color:       @kuro-white-light;
 }
 
 element selected.active {
-    text-color: @kuro-yellow-dark-al;
+	background-color: @kuro-blue-dark-al;
     text-color:       @kuro-black-dark;
 }
 
@@ -115,4 +119,3 @@ entry {
     placeholder:       "emoji";
     text-color: @kuro-white-normal;
 }
-
