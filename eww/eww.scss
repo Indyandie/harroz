@@ -215,7 +215,7 @@ $jetto: JetBrainsMonoNerdFontMono;
 .vol-stat,
 .light-stat {
   all: unset;
-  background: rgba(34, 34, 34, 0.75);
+  background: rgba($kuro-black-dark, 0.75);
   padding: 0;
 
   .box {
@@ -224,28 +224,26 @@ $jetto: JetBrainsMonoNerdFontMono;
 
     .icon {
       font-size: 96px;
-      // font-family: $jetto;
-      // background: red;
+      color: $kuro-white-normal;
     }
 
     scale {
       padding: 0;
-      // background: blue;
 
       slider {
         border: 0;
-        background: rgba(0, 0, 0, 0);
+        background: rgba($kuro-black-normal, 0);
       }
 
       trough highlight {
-        background: rgba(131, 229, 101, 1);
+        background: rgba($kuro-green-dark, 1);
         border: 0;
         border-radius: 10px;
       }
 
       trough {
         padding: 0;
-        background: #4e4e4e;
+        background: $kuro-black-normal;
         border-radius: 50px;
         min-height: 12px;
         min-width: 112px;
