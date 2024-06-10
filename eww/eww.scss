@@ -173,8 +173,7 @@ $jetto: JetBrainsMonoNerdFontMono;
   }
 
   .value {
-    /* background: red; */
-    /* margin: 0; */
+    color: $kuro-blue-light;
   }
 
   .button {
@@ -190,9 +189,9 @@ $jetto: JetBrainsMonoNerdFontMono;
   background: $kuro-white-light;
   border: 0;
   padding: 0;
-  margin: -10px;
-  min-height: 12px;
-  min-width: 12px;
+  margin: -6px;
+  min-height: 2px;
+  min-width: 2px;
 }
 
 .volume scale trough highlight {
@@ -224,7 +223,7 @@ $jetto: JetBrainsMonoNerdFontMono;
 
     .icon {
       font-size: 96px;
-      color: $kuro-white-normal;
+      color: rgba($kuro-white-light, 0.2);
     }
 
     scale {
@@ -247,6 +246,26 @@ $jetto: JetBrainsMonoNerdFontMono;
         border-radius: 50px;
         min-height: 12px;
         min-width: 112px;
+      }
+    }
+  }
+}
+
+.vol-stat {
+  .box {
+    scale {
+      trough highlight {
+        background: rgba($kuro-blue-dark, 1);
+      }
+    }
+  }
+}
+
+.light-stat {
+  .box {
+    scale {
+      trough highlight {
+        background: rgba($kuro-yellow-dark, 1);
       }
     }
   }
