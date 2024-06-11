@@ -33,15 +33,18 @@
             :reveal {vol-info[1] == "off" ? false : true}
             :duration "50ms"
             :transition "slideleft"
-            (scale
-              :orientation "h"
-              :timeout "500ms"
-              :min 0
-              :max 101
-              :width 100
-              :value "${vol-info[0]}"
-              :draw-value false
-              :onchange {vol-info[1] ==  "off" ? "amixer set Master 1+ toggle && amixer sset Master {}%" : "amixer sset Master {}%"}
+            (eventbox
+              :cursor "pointer"
+              (scale
+                :orientation "h"
+                :timeout "500ms"
+                :min 0
+                :max 101
+                :width 100
+                :value "${vol-info[0]}"
+                :draw-value false
+                :onchange {vol-info[1] ==  "off" ? "amixer set Master 1+ toggle && amixer sset Master {}%" : "amixer sset Master {}%"}
+                )
               )
             )
           )

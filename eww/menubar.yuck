@@ -20,7 +20,7 @@
     :hexpand true
     :onhover "eww update show-menubar=true"
     :onhoverlost "eww update show-menubar=false"
-    :cursor "pointer"
+    :cursor "default"
     (menubar_layout)
     )
   )
