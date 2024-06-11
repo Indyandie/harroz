@@ -47,24 +47,26 @@ $jetto: JetBrainsMonoNerdFontMono;
   font-family: $jetto;
   background-color: transparent;
   font-size: 18px;
-  color: $kuro-white-normal;
+  color: rgba($kuro-white-normal, 0.8);
 
   .layout-box {
-    padding: 2px 16px;
-    background: rgba($kuro-black-normal, 0.75);
-    /* width: 100%; */
+    padding: 8px 16px;
+    background: transparent;
   }
 
-  /* .chronic { */
-  /* background: yellow; */
-  /* } */
+  .chronic,
+  .system {
+    background: rgba($kuro-black-dark, 1);
+    padding: 0 18px;
+    border: 2 solid rgba($kuro-white-normal, 0.25);
+    border-radius: 32px;
+  }
 
+  .chronic {
+    color: rgba($kuro-white-normal, 1);
+  }
   /* .void { */
   /* background: orange; */
-  /* } */
-
-  /* .system { */
-  /* background: blue; */
   /* } */
 }
 

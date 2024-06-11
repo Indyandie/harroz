@@ -17,14 +17,13 @@
       :class "volume"
       :space-evenly false
       :hexpand false
-      :spacing 8
       (revealer
         :reveal show-volume-slider
         :duration "100ms"
         :transition "slideleft"
         (box
           :hexpand false
-          :spacing 8
+          :spacing 4
           :space-evenly false
           (label
             :class "value" 
@@ -38,8 +37,8 @@
               :orientation "h"
               :timeout "500ms"
               :min 0
-              :max 100
-              :width 72
+              :max 101
+              :width 100
               :value "${vol-info[0]}"
               :draw-value false
               :onchange {vol-info[1] ==  "off" ? "amixer set Master 1+ toggle && amixer sset Master {}%" : "amixer sset Master {}%"}
