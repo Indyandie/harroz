@@ -45,25 +45,30 @@
     :hexpand true
     :halign "center"
     (for wsp in allworkspaces
-      (button
-        :active true
-        :height 48
-        :tooltip "${wsp[4]}"
-        :class {activeworkspace.id == wsp[0] ? "active-wsp wsp-btn" : "wsp-btn"} 
-        :onclick "hyprctl dispatch workspace ${wsp[0]} && eww close workspaces"
-        (box
-          :valign "center"
-          :spacing 16
-          (label
-            :class "icon"
-            :text {matches(hyprworkspaces, '"id": ${wsp[0]},') ? "${wsp[2]}" : wsp[1]} 
-            )
-          (label
-            :class "name"
-            :text "${wsp[3]}"
-            )
+      (eventbox
+        :cursor {activeworkspace.id == wsp[0] ? "default" : "pointer"} 
+        (button
+            :active true
+            :height 48
+            :tooltip "${wsp[4]}"
+            :class {activeworkspace.id == wsp[0] ? "active-wsp wsp-btn" : "wsp-btn"} 
+            :onclick "hyprctl dispatch workspace ${wsp[0]} && eww close workspaces"
+            (box
+              :valign "center"
+              :halign "center"
+              :spacing 6
+              (label
+                :class "icon"
+                :text {matches(hyprworkspaces, '"id": ${wsp[0]},') ? "${wsp[2]}" : wsp[1]} 
+                )
+              (label
+                :class "name"
+                :text "${wsp[3]}"
+                )
+              )
           )
       )
+      
     )
   )
 )
