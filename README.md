@@ -18,8 +18,10 @@ Hyprland config
 
 ## To Do
 
-- [ ] [bemoji](https://github.com/marty-oehme/bemoji)
+- [x] [bemoji](https://github.com/marty-oehme/bemoji)
 - [ ] Add plugins
+- [ ] eww - notifications dunst widget (dunstctl)
+- [ ] eww - move workspace to menubar
 
 ## Investigate
 
