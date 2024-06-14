@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = none
-    width = (0, 400)
+    width = 400
     height = 300
     origin = top-right # Position the notification in the top right corner
     offset = 32x64
@@ -113,8 +113,8 @@
 
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#888888"
+    background = "#333333"
+    foreground = "#ddd0c4"
     timeout = 10
     #default_icon = /path/to/icon
 
@@ -126,12 +126,12 @@
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
+    background = "#141515"
+    foreground = "#ffb7b7"
+    frame_color = "#b66056aa"
     timeout = 0
     override_pause_level = 60
-    #default_icon = /path/to/icon
+    # default_icon = /path/to/icon
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
