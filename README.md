@@ -22,6 +22,9 @@ Hyprland config
 - [ ] Add plugins
 - [ ] eww - notifications dunst widget (dunstctl)
 - [ ] eww - move workspace to menubar
+- [ ] eww - migrate from version `4` to `6`
+- [ ] eww - implement systray
+  - [ ] remove waybar
 
 ## Investigate
 
