@@ -25,6 +25,9 @@ Hyprland config
 - [ ] eww - migrate from version `4` to `6`
 - [ ] eww - implement systray
   - [ ] remove waybar
+- [ ] hyprland - minimize workspace (special)
+- [ ] hyprland - pin workspace (videos (corners), reading (left or right side))
+- [ ] hyprland - zoom/magnify
 
 ## Investigate
 
