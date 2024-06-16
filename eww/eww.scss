@@ -221,16 +221,19 @@ $jetto: JetBrainsMonoNerdFontMono;
 .vol-stat,
 .light-stat {
   all: unset;
-  background: rgba($kuro-black-dark, 0.75);
-  padding: 0;
+  background: rgba($kuro-black-dark, 0.5);
+  border: 2 solid rgba($kuro-white-normal, 0.1);
+  padding: 16px 16px 24px;
+  border-radius: 16px;
 
   .box {
     transition-property: all;
     padding: 24px;
 
     .icon {
-      font-size: 96px;
-      color: rgba($kuro-white-light, 0.2);
+      font-size: 72px;
+      color: rgba($kuro-white-light, 0.35);
+      margin-bottom: 8px;
     }
 
     scale {
