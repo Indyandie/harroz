@@ -2,7 +2,9 @@
 
 Hyprland config
 
-## Docs
+## Resources
+
+### [Hyprland Wiki](https://wiki.hyprland.org/)
 
 - [Keywords](https://wiki.hyprland.org/Configuring/Keywords/)
 - [Variables](https://wiki.hyprland.org/Configuring/Variables/)
@@ -10,15 +12,15 @@ Hyprland config
 - [Dispatcher](https://wiki.hyprland.org/Configuring/Dispatchers/)
 - [Hyprctl](https://wiki.hyprland.org/Configuring/Using-hyprctl/)
 
-## Resources
+### Misc
 
 - [awesome hyprland](https://github.com/hyprland-community/awesome-hyprland)
 - [hyprpicker](https://github.com/hyprwm/hyprpicker)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+- [bemoji](https://github.com/marty-oehme/bemoji)
 
 ## To Do
 
-- [x] [bemoji](https://github.com/marty-oehme/bemoji)
 - [ ] Add plugins
 - [ ] eww - notifications dunst widget (dunstctl)
 - [ ] eww - move workspace to menubar
@@ -28,16 +30,17 @@ Hyprland config
 - [ ] hyprland - minimize workspace (special)
 - [ ] hyprland - pin workspace (videos (corners), reading (left or right side))
 - [ ] hyprland - zoom/magnify
+- [ ] hyprland - document keybinds
+
+### Media
+
+- [pamixer](https://github.com/cdemoulins/pamixer)
 
 ## Investigate
 
 ### Plugins
 
 - [Hyprshot](https://github.com/Gustash/Hyprshot)
-
-### Screen Lock
-
-- [swaylock](https://github.com/hyprland-community/awesome-hyprland)
 
 ### Application Launcher
 
@@ -47,13 +50,7 @@ Hyprland config
 ### Bar
 
 - [ironbar](https://github.com/JakeStanger/ironbar)
-- [hybrid bar](https://github.com/vars1ty/HybridBar)
 
 ### Notifications
 
 - [Sway Notification Center](https://github.com/ErikReider/SwayNotificationCenter)
-- [mako](https://github.com/emersion/mako)
-
-### Media
-
-- [pamixer](https://github.com/cdemoulins/pamixer)
