@@ -46,6 +46,8 @@ $jetto: JetBrainsMonoNerdFontMono;
 }
 
 .tray-box {
+  padding: 0 16px 16px;
+
   .sys-stats,
   .systray {
     background: rgba($kuro-black-dark, 1);
@@ -75,7 +77,7 @@ $jetto: JetBrainsMonoNerdFontMono;
   color: rgba($kuro-white-normal, 0.8);
 
   .layout-box {
-    padding: 8px 16px;
+    padding: 16px 16px 0;
     background: transparent;
   }
 
@@ -137,6 +139,7 @@ $jetto: JetBrainsMonoNerdFontMono;
   font-family: $jetto;
   background: rgba($kuro-black-normal, 0);
   font-size: 24px;
+  padding: 16px;
 
   .wsp-box {
     // dumb hack to fill up the edges
