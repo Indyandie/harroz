@@ -13,25 +13,101 @@
     )
   (eventbox
     :hexpand true
-    :onhover "waybar && true"
-    :onhoverlost "pkill waybar"
-    :cursor "pointer"
+    :onhover "eww update show-tray=true"
+    :onhoverlost "eww update show-tray=false"
     (traybar_layout)
     )
   )
 
-(defvar show-tray false)
+(defvar show-tray true)
 
 (defwidget traybar_layout []
   (revealer
-    :class "tray-box"
     :transition "slideup"
     :reveal show-tray
     :duration "4ms"
     (box
+      :class "tray-box"
       :hexpand true
       :halign "fill" ;center ignores hexpand
-      
+      (box
+        :halign "start"
+        :hexpand false
+        :spacing 16
+        :space-evenly false
+        :orientation "h"
+        :class "sys-stats"
+        (box
+          :class "cpu"
+          :hexpand false
+          :haligh "start"
+          :spacing 8
+          :space-evenly false
+            (label
+            :class "icon"
+            :style "font-size: 32px;"
+            :text ""
+            )
+          (label
+            :class "sys-stats-value"
+            :style "font-size: 18px;"
+            :text "${round(EWW_CPU["avg"], 2)}%"
+            )
+          )
+        (box
+          :class "ram"
+          :hexpand false
+          :spacing 8
+          :space-evenly false
+          (label
+            :class "icon"
+            :style "font-size: 32px;"
+            :text ""
+            )
+          (label
+            :class "sys-stats-value"
+            :style "font-size: 18px;"
+            :text "${round(EWW_RAM["used_mem_perc"], 2)}%"
+            )
+          )
+        (box
+          :class "temp"
+          :hexpand false
+          :spacing 8
+          :space-evenly false
+          (label
+            :class "icon"
+            :style "font-size: 32px;"
+            :text ""
+            )
+          (label
+            :class "sys-stats-value"
+            :text "${round(EWW_TEMPS["BAT0_TEMP"], 2)}%"
+            )
+          )
+        )
+      (box
+        :class "systray"
+        :hexpand false
+        :spacing 8
+        :space-evenly false
+        :halign "end"
+        :valigh "center"
+        (label
+          :class "placeholder"
+          :style "font-size: 24px"
+          :text "▲"
+          )
+        (eventbox
+          :cursor "pointer"
+          (systray
+            :class "sys-items"
+            :orientation "h"
+            :icon-size 24
+            :prepend-new true
+            )
+          )
+        )
       )
     )
   )

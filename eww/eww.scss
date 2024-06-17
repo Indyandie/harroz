@@ -39,7 +39,32 @@ $jetto: JetBrainsMonoNerdFontMono;
 /* * { all: unset; } */
 
 .traybar {
-  background: transparent;
+  font-family: $jetto;
+  background-color: transparent;
+  font-size: 20px;
+  color: rgba($kuro-white-normal, 1);
+}
+
+.tray-box {
+  .sys-stats,
+  .systray {
+    background: rgba($kuro-black-dark, 1);
+    padding: 4px 18px;
+    border: 2 solid rgba($kuro-white-normal, 0.25);
+    border-radius: 32px;
+
+    .cpu,
+    .ram,
+    .temp {
+      .icon {
+        color: rgba($kuro-white-dark, 1);
+        font-weight: 900;
+      }
+      .sys-stats-value {
+        font-weight: 900;
+      }
+    }
+  }
 }
 
 .menubar {

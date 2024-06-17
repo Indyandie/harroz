@@ -2,7 +2,7 @@
 (include "./volume.yuck")
 (include "./date.yuck")
 (include "./battery.yuck")
-; (include "./traybar.yuck")
+(include "./traybar.yuck")
 
 ; main
 (defwindow menubar
