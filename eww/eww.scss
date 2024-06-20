@@ -41,7 +41,7 @@ $jetto: JetBrainsMonoNerdFontMono;
 .traybar {
   font-family: $jetto;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 18px;
   color: rgba($kuro-white-normal, 1);
 }
 
@@ -61,6 +61,7 @@ $jetto: JetBrainsMonoNerdFontMono;
       .icon {
         color: rgba($kuro-white-dark, 1);
         font-weight: 900;
+        font-size: 24px;
       }
       .sys-stats-value {
         font-weight: 900;
@@ -73,7 +74,7 @@ $jetto: JetBrainsMonoNerdFontMono;
   all: unset;
   font-family: $jetto;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 16px;
   color: rgba($kuro-white-normal, 0.8);
 
   .layout-box {
