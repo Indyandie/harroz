@@ -92,7 +92,7 @@
         (label
           :class "placeholder"
           :style "font-size: 24px"
-          :text "▲"
+          :text "┄"
           )
         (eventbox
           :cursor "pointer"
