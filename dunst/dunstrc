@@ -51,7 +51,8 @@
     vertical_alignment = center
     show_age_threshold = 60
 
-    ellipsize = end # "start", "middle" and "end".
+    # "start", "middle" and "end".
+    ellipsize = "end"
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
@@ -60,7 +61,8 @@
     ### Icons ###
 
     enable_recursive_icon_lookup = true
-    icon_theme = "Gruvbox-Dark, Adwaita"
+    # icon_theme = "Materia-dark"
+    # "Gruvbox-Dark, Adwaita"
     icon_position = left # left/right/top/off
     min_icon_size = 72
     max_icon_size = 72
