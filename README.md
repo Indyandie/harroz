@@ -28,7 +28,9 @@ Hyprland config
 - [x] eww - implement systray
   - [x] archive waybar
 - [ ] hyprland - minimize workspace (special)
-- [ ] hyprland - pin workspace (videos (corners), reading (left or right side))
+- [ ] hyprland pin clients
+  - [ ] corners (`33%` width)
+  - [ ] reading (`50%` left or right side)
 - [ ] hyprland - zoom/magnify
 - [ ] hyprland - document keybinds
 
