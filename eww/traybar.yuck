@@ -38,6 +38,7 @@
         :class "sys-stats"
         (box
           :class "cpu"
+          :tooltip "CPU usage"
           :hexpand false
           :haligh "start"
           :spacing 8
@@ -54,6 +55,7 @@
           )
         (box
           :class "ram"
+          :tooltip "RAM usage"
           :hexpand false
           :spacing 8
           :space-evenly false
@@ -69,6 +71,7 @@
           )
         (box
           :class "temp"
+          :tooltip "Temperature (Celsius)"
           :hexpand false
           :spacing 8
           :space-evenly false
