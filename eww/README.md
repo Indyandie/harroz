@@ -5,6 +5,50 @@
 
 ## Widgets
 
+### Bars & Indicators
+
+The [**menubar**](./menubar.yuck) sits at the _top_ edge of the screen and revealed on hover.
+
+- Left
+  - [Date](./date.yuck)
+- Right
+  - [Volume (Indicator)](./volume.yuck) - controls (slider) and mute button
+  - [Network](./network.yuck) - general status
+  - [Battery](./battery.yuck) - time left and percentage
+
+---
+
+The **indicators** are revealed when the media keys are pressed to adjust [**volume**](./volume.yuck) or screen brightness ([**light**](./light.yuck)).
+
+---
+
+The [**traybar**](./traybar.yuck) sits at the _bottom_ edge of the screen and revealed on hover.
+
+- Left
+  - CPU
+  - Memory
+  - Temperature (Celsius)
+- Right
+  - System Tray
+
+#### Screenshots
+
+##### Menubar
+
+![](./screenshots/bars/menubar.png)
+
+##### Traybar
+
+![](./screenshots/bars/traybar.png)
+
+##### Indicators
+
+![](./screenshots/bars/volume-indicator.png)
+
+![](./screenshots/bars/menubar-volume-indicator-.png)
+
+![](./screenshots/bars/light-indicator.png)
+
 ### [Workspace Switcher](./workspace.yuck)
 
 A simple workspace switcher.
