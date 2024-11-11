@@ -37,19 +37,19 @@ The [**traybar**](./traybar.yuck) sits at the _bottom_ edge of the screen and re
 
 ##### Menubar
 
-![](./screenshots/bars/menubar.png)
+![desktop screenshot of menubar](./screenshots/bars/menubar.png "menubar")
 
 ##### Traybar
 
-![](./screenshots/bars/traybar.png)
+![desktop screenshot of traybar](./screenshots/bars/traybar.png "traybar")
 
 ##### Indicators
 
-![](./screenshots/bars/volume-indicator.png)
+![desktop screenshot of volume indicator](./screenshots/bars/volume-indicator.png "volume indicator")
 
-![](./screenshots/bars/menubar-volume-indicator-.png)
+![desktop screenshot of volume indicator and menubar](./screenshots/bars/menubar-volume-indicator-.png "volumen indicator & menubar")
 
-![](./screenshots/bars/light-indicator.png)
+![desktop screenshot of brigthness indicator](./screenshots/bars/light-indicator.png "brightness indicator")
 
 ### [Workspace Switcher](./workspace.yuck)
 
@@ -59,16 +59,16 @@ https://github.com/user-attachments/assets/a507cac3-2121-4497-89a8-7da49756dc88
 
 #### Screenshots
 
-![workspace 01 with three terminal clients](./screenshots/workspace/01-workspace_01-client.png)
+![workspace 01 with three terminal clients](./screenshots/workspace/01-workspace_01-client.png "workspace 01: clients")
 
-![workspace 01 with three terminal clients and workspace switcher](./screenshots/workspace/02-workspace_01-switcher.png)
+![workspace 01 with three terminal clients and workspace switcher](./screenshots/workspace/02-workspace_01-switcher.png "workspace 01: clients")
 
-![fullscreen terminal client in workspace 01 and workspace switcher overlay](./screenshots/workspace/03-workspace_01-switcher-full_screen.png)
+![full screen terminal client in workspace 01 and workspace switcher overlay](./screenshots/workspace/03-workspace_01-switcher-full_screen.png "workspace 01: clients (full screen)")
 
-![workspace 02 with no clients and workspace switcher](./screenshots/workspace/03-workspace_02-switcher-no_client.png)
+![workspace 02 with no clients and workspace switcher](./screenshots/workspace/03-workspace_02-switcher-no_client.png "workspace 02: no clients")
 
-![workspace 03 with no clients and workspace switcher](./screenshots/workspace/04-workspace_03-switcher-no_client.png)
+![workspace 03 with no clients and workspace switcher](./screenshots/workspace/04-workspace_03-switcher-no_client.png "workspace 02: no clients")
 
-![workspace 02 with brave client and workspace switcher](./screenshots/workspace/05-workspace_02-switcher.png)
+![workspace 02 with brave client and workspace switcher](./screenshots/workspace/05-workspace_02-switcher.png "workspace 02: client")
 
-![workspace 04 with no clients and workspace switcher](./screenshots/workspace/06-workspace-04-switcher-no_client.png)
+![workspace 04 with no clients and workspace switcher](./screenshots/workspace/06-workspace-04-switcher-no_client.png "workspace 04: no clients")
