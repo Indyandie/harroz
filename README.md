@@ -33,6 +33,17 @@ Hyprland config
   - [ ] reading (`50%` left or right side)
 - [ ] hyprland - zoom/magnify
 - [ ] hyprland - document keybinds
+- [ ] hyprcurso -
+
+---
+
+### Hyprcursor
+
+- [akshatshinde/hyprcursor-themes](https://github.com/sakshatshinde/hyprcursor-themes?tab=readme-ov-file)
+
+#### XSERVER
+
+- [rose-pine/cursor](https://github.com/rose-pine/cursor)
 
 ### Media
 
