@@ -24,16 +24,16 @@
   )
 
 (defvar allworkspaces '[
-  [1, "□", "■", "term", "terminal"],
-  [2, "◯", "●", "web",  "web browser"],
-  [3, "▽", "▼", "des",  "design"],
-  [4, "◇", "◆", "fun",  "games"],
-  [5, "△", "▲", "sys",  "system"],
-  [6, "◦", "▪", "六",   "roku"],
-  [7, "◦", "▪", "七",   "nana"],
-  [8, "◦", "▪", "八",   "hachi"],
-  [9, "◦", "▪", "九",   "nueve"],
-  [10, "◦", "▪", "十",   "diez"]
+  [ 1, "◦", "•",  "DEF", "default"],
+  [ 2, "□", "■", "TERM", "terminal"],
+  [ 3, "◯", "●",  "WEB", "web browser"],
+  [ 4, "▽", "▼", "NOTE", "writing"],
+  [ 5, "◁", "◀", "CHAT", "comms"],
+  [ 6, "△", "▲",  "DES", "design"],
+  [ 7, "▷", "▶",  "FUN", "games"],
+  [ 8, "◇", "◆",  "SYS", "system"],
+  [ 9, "▫", "▪",  "DIR", "files"],
+  [10, "◦", "▪",   "二", "ni"]
   ]')
 
 (defwidget _workspaces []
