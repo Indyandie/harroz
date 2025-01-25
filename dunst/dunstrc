@@ -75,8 +75,8 @@
 
     ### Misc/Advanced ###
 
-    dmenu = /run/current-system/sw/bin/rofi -dmenu -p dunst:
-    browser = /usr/bin/xdg-open
+    dmenu = /run/current-system/sw/bin/rofi -dmenu -sync 
+    browser = /run/current-system/sw/bin/xdg-open
     always_run_script = true
     corner_radius = 8
     corners = all
