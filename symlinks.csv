@@ -5,6 +5,7 @@ link,confdir,conf
 /hypr/hyprlock/hyprlock.conf,/.config/hypr/,hyprlock.conf
 /hypr/hyprlock/hyprlock.png,/.config/hypr/wallpaper/,hyprlock.png
 /hypr/hypridle/hypridle.conf,/.config/hypr/,hypridle.conf
+/hypr/hyprsunset/hyprsunset.conf,/.config/hypr/,hyprsunset.conf
 /hyprshade/hyprshade.toml,/.config/hypr/,hyprshade.toml
 /hyprshade/blue-light-filter.glsl,/.config/hypr/shaders/,blue-light-filter.glsl
 /hyprshade/vibrance.glsl,/.config/hypr/shaders/,vibrance.glsl
