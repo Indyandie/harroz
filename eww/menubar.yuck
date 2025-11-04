@@ -18,7 +18,7 @@
     )
   (eventbox
     :hexpand true
-    :onhover "eww update show-menubar=true"
+    :onscroll "eww update show-menubar=true"
     :onhoverlost "eww update show-menubar=false"
     :cursor "default"
     (menubar_layout)

@@ -12,13 +12,13 @@
     )
   (eventbox
     :hexpand true
-    :onhover "eww update show-tray=true"
+    :onscroll "eww update show-tray=true"
     :onhoverlost "eww update show-tray=false"
     (traybar_layout)
     )
   )
 
-(defvar show-tray true)
+(defvar show-tray false)
 
 (defwidget traybar_layout []
   (revealer
