@@ -81,7 +81,7 @@
             )
           (label
             :class "sys-stats-value"
-            :text "${round(EWW_TEMPS["BAT0_TEMP"], 2)}°"
+            :text "${round(EWW_TEMPS["CROS_EC_CPU@4C"], 2)}°"
             )
           )
         )
