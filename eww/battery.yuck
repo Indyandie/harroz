@@ -1,9 +1,10 @@
 (defvar show-battery-power false)
 
-(defpoll batt
+(defpoll batt_remaining
   :interval "5s"
-  :initial '["40", "00:00:00"]'
-  `echo "[\`acpi | rg ".* [0-9]+%" | sd ".+ ([0-9]{2,})%.*" '$1' || echo 0\`, "\`acpi | rg "[0-9:]{8}|charged|Full" | sd ".* (([0-9\:]{8})|(until charged)|(Full)).*" '"$1"' | sd "until charged" "charging"\`"]"`
+  :initial "00:00:00"
+  "acpi | sd '.*([0-9:]{8}).*' '$1'"
+
 )  
 
 (defwidget _battery []
@@ -13,25 +14,25 @@
     (box 
       :space-evenly false
       :spacing {show-battery-power == true ? 8 : 0}
-      ; :tooltip "${batt[0]}%"
-      :class {EWW_BATTERY.BAT0.status == 'Charging' ? 'battery bat-charging' :
-        batt[0] <= 50 ? 'battery bat-low' :
-        batt[0] > 80 ? 'battery bat-full' : 
+      :class {EWW_BATTERY.status == 'Charging' ? 'battery bat-charging' :
+        EWW_BATTERY.total_avg <= 50 ? 'battery bat-low' :
+        EWW_BATTERY.total_avg > 80 ? 'battery bat-full' :
         'battery bat-box' }
       (revealer
         :reveal show-battery-power
         :transition "slideleft"
         :duration "300ms"
-        (label :text "${batt[1]} ${batt[0]}%")
+        (label :text "${batt_remaining} - ${round(EWW_BATTERY.total_avg, 0)}%")
         )
       (label 
         :class "icon"
-        :text {EWW_BATTERY.BAT0.status == 'Charging' ? "" :
-        batt[0] > 90 ? "" :
-        batt[0] > 75 ? "" :
-        batt[0] > 50 ? "" :
-        batt[0] > 25 ? "" :
-        batt[0] > 10 ? "" :
+        :text {EWW_BATTERY.status == 'Charging' ? "" :
+        EWW_BATTERY.total_avg == 100.0 ? "" :
+        EWW_BATTERY.total_avg > 90 ? "" :
+        EWW_BATTERY.total_avg > 75 ? "" :
+        EWW_BATTERY.total_avg > 50 ? "" :
+        EWW_BATTERY.total_avg > 25 ? "" :
+        EWW_BATTERY.total_avg > 10 ? "" :
         "" }
         )
       )
