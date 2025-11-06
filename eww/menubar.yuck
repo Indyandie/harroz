@@ -3,6 +3,7 @@
 (include "./date.yuck")
 (include "./battery.yuck")
 (include "./traybar.yuck")
+(include "./active-window.yuck")
 
 ; main
 (defwindow menubar
@@ -32,7 +33,7 @@
     :transition "slidedown"
     :reveal show-menubar
     :duration "400ms"
-    (box
+    (centerbox
       :class "layout-box"
       :hexpand true
       :halign "fill" ;center ignores hexpand
@@ -41,6 +42,9 @@
         :class "chronic"
         :halign "start"
         (_date)
+        )
+      (box
+        (_active-window)
         )
       (box 
         :hexpand true

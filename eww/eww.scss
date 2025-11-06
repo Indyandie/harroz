@@ -31,9 +31,7 @@ $kuro-orange-dark: #ab7b4e;
 $kuro-brown-normal: #9d5918;
 $kuro-brown-light: #f9cfb9;
 $kuro-brown-dark: #837369;
-$kuro-monospace-default: "JetBrainsMono Nerd Font", ui-monospace, SFMono-Regular,
-  "Cascadia Code", "Roboto Mono", "DejaVu Sans Mono", "Liberation Mono", Menlo,
-  Monaco, "Consolas", "Source Code Pro", monospace;
+$kuro-monospace-default: "JetBrainsMono Nerd Font", ui-monospace, SFMono-Regular, "Cascadia Code", "Roboto Mono", "DejaVu Sans Mono", "Liberation Mono", Menlo, Monaco, "Consolas", "Source Code Pro", monospace;
 $jetto: JetBrainsMonoNerdFontMono;
 
 /* * { all: unset; } */
@@ -83,7 +81,8 @@ $jetto: JetBrainsMonoNerdFontMono;
   }
 
   .chronic,
-  .system {
+  .system,
+  .active-window {
     background: rgba($kuro-black-dark, 1);
     padding: 0 18px;
     border: 2 solid rgba($kuro-white-normal, 0.25);
@@ -97,6 +96,14 @@ $jetto: JetBrainsMonoNerdFontMono;
   /* .void { */
   /* background: orange; */
   /* } */
+  .active-window {
+    .aw-class {
+      font-weight: bolder;
+    }
+    .aw-title {
+      font-weight: lighter;
+    }
+  }
 }
 
 .battery,

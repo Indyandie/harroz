@@ -21,6 +21,7 @@ link,confdir,conf
 /eww/volume.yuck,/.config/eww/,volume.yuck
 /eww/workspace.yuck,/.config/eww/,workspace.yuck
 /eww/traybar.yuck,/.config/eww/,traybar.yuck
+/eww/active-window.yuck,/.config/eww/,active-window.yuck
 /dunst/dunstrc,/.config/dunst/,dunstrc
 /waybar/waybar-config.json,/.config/waybar/,config
 /waybar/waybar-style.css,/.config/waybar/,style.css

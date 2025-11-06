@@ -1,0 +1,28 @@
+(defpoll active-window
+  :interval "500ms"
+  "hyprctl activewindow -j"
+)
+
+(defpoll show-active-window
+  :interval "500ms"
+  "hyprctl activewindow -j && echo true || echo false"
+)
+
+(defwidget _active-window []
+  (revealer
+    :transition "slidedown"
+    :reveal {active-window.class == 'null' ? false : true}
+    :duration "4ms"
+    (box
+      :class "active-window"
+      :spacing 16
+      :space-evenly false
+      (label
+        :class "aw-class"
+        ; :text "${active-window.class}"
+        :text "${replace("${active-window.class}", "\\w+\\.", "")}" ; NOTE: use \\ as the escape
+        :tooltip "${active-window.title}"
+        )
+      )
+    )
+  )
