@@ -19,6 +19,9 @@
   )
 
 (defvar show-tray false)
+(defvar counter-font-size
+  "14px"
+)
 
 (defwidget traybar_layout []
   (revealer
@@ -49,7 +52,7 @@
             )
           (label
             :class "sys-stats-value"
-            :style "font-size: 18px;"
+            :style "font-size: ${counter-font-size};"
             :text "${round(EWW_CPU["avg"], 2)}%"
             )
           )
@@ -65,7 +68,7 @@
             )
           (label
             :class "sys-stats-value"
-            :style "font-size: 18px;"
+            :style "font-size: ${counter-font-size};"
             :text "${round(EWW_RAM["used_mem_perc"], 2)}%"
             )
           )
@@ -81,30 +84,32 @@
             )
           (label
             :class "sys-stats-value"
+            :style "font-size: ${counter-font-size};"
             :text "${round(EWW_TEMPS["CROS_EC_CPU@4C"], 2)}°"
             )
           )
         )
       (box
         :class "systray"
-        :hexpand false
-        :spacing 8
+        :hexpand true
         :space-evenly false
+        :spacing 8
         :halign "end"
         :valigh "center"
         (label
+          :tooltip "system tray"
           :class "placeholder"
-          :style "font-size: 24px"
-          :text "┄"
+
+          :style "counter-font-size: 18px; font-weight: 900;"
+          :text "□"
           )
-        (eventbox
+        (systray
+          :spacing 8
           :cursor "pointer"
-          (systray
-            :class "sys-items"
-            :orientation "h"
-            :icon-size 24
-            :prepend-new true
-            )
+          :class "sys-items"
+          :orientation "h"
+          :icon-size 18
+          :prepend-new true
           )
         )
       )
