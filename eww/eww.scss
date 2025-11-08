@@ -39,18 +39,19 @@ $jetto: JetBrainsMonoNerdFontMono;
 .traybar {
   font-family: $jetto;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 14px;
   color: rgba($kuro-white-normal, 1);
 }
 
 .tray-box {
-  padding: 0 16px 16px;
+  padding: 16px 8px 8px;
 
   .sys-stats,
   .systray {
-    background: rgba($kuro-black-dark, 1);
-    padding: 4px 18px;
-    border: 2 solid rgba($kuro-white-normal, 0.25);
+    box-shadow: $kuro-white-dark;
+    background: rgba($kuro-black-dark, 0.70);
+    padding: 4px 16px;
+    border: 1 solid rgba($kuro-white-normal, 0.30);
     border-radius: 32px;
 
     .cpu,
@@ -59,7 +60,7 @@ $jetto: JetBrainsMonoNerdFontMono;
       .icon {
         color: rgba($kuro-white-dark, 1);
         font-weight: 900;
-        font-size: 24px;
+        font-size: 18px;
       }
       .sys-stats-value {
         font-weight: 900;
@@ -72,36 +73,35 @@ $jetto: JetBrainsMonoNerdFontMono;
   all: unset;
   font-family: $jetto;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 14px;
   color: rgba($kuro-white-normal, 0.8);
 
   .layout-box {
-    padding: 16px 16px 0;
+    padding: 8px 8px 32px;
     background: transparent;
   }
 
   .chronic,
   .system,
   .active-window {
-    background: rgba($kuro-black-dark, 1);
-    padding: 0 18px;
-    border: 2 solid rgba($kuro-white-normal, 0.25);
+    background: rgba($kuro-black-dark, 0.70);
+    padding: 0 14px;
+    border: 1 solid rgba($kuro-white-normal, 0.30);
     border-radius: 32px;
   }
 
   .chronic {
     color: rgba($kuro-white-normal, 1);
-    font-weight: 900;
   }
   /* .void { */
   /* background: orange; */
   /* } */
   .active-window {
     .aw-class {
-      font-weight: bolder;
+      font-weight: 900;
     }
     .aw-title {
-      font-weight: lighter;
+      font-weight: 600;
     }
   }
 }
