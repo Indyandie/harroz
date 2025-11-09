@@ -14,7 +14,7 @@
     (box 
       :space-evenly false
       :spacing {show-battery-power == true ? 8 : 0}
-      :class {EWW_BATTERY.status == 'Charging' ? 'battery bat-charging' :
+      :class {EWW_BATTERY.BAT1.status == 'Charging' ? 'battery bat-charging' :
         EWW_BATTERY.total_avg <= 50 ? 'battery bat-low' :
         EWW_BATTERY.total_avg > 80 ? 'battery bat-full' :
         'battery bat-box' }
@@ -26,7 +26,7 @@
         )
       (label 
         :class "icon"
-        :text {EWW_BATTERY.status == 'Charging' ? "" :
+        :text {EWW_BATTERY.BAT1.status == 'Charging' ? "" :
         EWW_BATTERY.total_avg == 100.0 ? "" :
         EWW_BATTERY.total_avg > 90 ? "" :
         EWW_BATTERY.total_avg > 75 ? "" :
