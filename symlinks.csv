@@ -13,6 +13,7 @@ link,confdir,conf
 /eww/hypreww.conf,/.config/hypr/,hypreww.conf
 /eww/battery.yuck,/.config/eww/,battery.yuck
 /eww/eww.yuck,/.config/eww/,eww.yuck
+/eww/theme.yuck,/.config/eww/,theme.yuck
 /eww/eww.scss,/.config/eww/,eww.scss
 /eww/light.yuck,/.config/eww/,light.yuck
 /eww/menubar.yuck,/.config/eww/,menubar.yuck
