@@ -1,0 +1,39 @@
+(defpoll bluetooth-status
+  :interval "500ms"
+  :initial "unknown"
+  "echo $(bluetoothctl show | rg Powered | sd '(^\s)+' '')"
+  )
+
+(defpoll bluetooth-device-count
+  :interval "500ms"
+  :initial "unknown"
+  "echo -n $(bluetoothctl devices Connected | wc -l)"
+  )
+
+(defpoll bluetooth-device-one
+  :interval "1000ms"
+  :initial "unknown"
+  "bluetoothctl devices Connected"
+  )
+
+(defwidget _blue []
+  (box
+    :class "wifi"
+    :style {bluetooth-status != "Powered: yes" ? "opacity: .40;" : ""}
+    :tooltip {
+        bluetooth-device-count > 0 ? "${replace(bluetooth-device-one, "Device [A-Z0-9:]+", "")}" :
+        bluetooth-status == "Powered: yes" ? "On" :
+        bluetooth-status == "Powered: no" ? "Off" :
+        "${bluetooth-status}"
+      }
+    (eventbox
+      :cursor "pointer"
+      :onclick "blueman-manager &"
+      (label
+        :style {bluetooth-device-count != "0" ? "color: ${kuro-blue-dark};" : ""}
+        :class "icon"
+        :text {bluetooth-device-count != "0" ? "" : ""}
+        )
+      )
+  )
+  )

@@ -18,6 +18,7 @@ link,confdir,conf
 /eww/light.yuck,/.config/eww/,light.yuck
 /eww/menubar.yuck,/.config/eww/,menubar.yuck
 /eww/network.yuck,/.config/eww/,network.yuck
+/eww/blue.yuck,/.config/eww/,blue.yuck
 /eww/date.yuck,/.config/eww/,date.yuck
 /eww/volume.yuck,/.config/eww/,volume.yuck
 /eww/workspace.yuck,/.config/eww/,workspace.yuck

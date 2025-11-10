@@ -1,5 +1,6 @@
 (include "./theme.yuck")
 (include "./network.yuck")
+(include "./blue.yuck")
 (include "./volume.yuck")
 (include "./date.yuck")
 (include "./battery.yuck")
@@ -54,6 +55,7 @@
         :space-evenly false
         :spacing 16
         (_volume)
+        (_blue)
         (_network)
         (_battery)
         )
