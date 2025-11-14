@@ -6,7 +6,7 @@
 )
 
 (defpoll net-name
-  :interval "100s"
+  :interval "9000ms"
   :initial "Unknown"
   `echo -n $(nmcli -f NAME connection show --active | head -n 2 | tail -n 1 | sd '(\w+)\s+\n' '$1')`
 )
