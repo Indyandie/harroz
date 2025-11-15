@@ -24,16 +24,16 @@
   )
 
 (defvar allworkspaces '[
-  [ 1, "◦", "•",  "DEF", "default"],
+  [ 1, "◯", "●",  "DEF", "default"],
   [ 2, "□", "■", "TERM", "terminal"],
-  [ 3, "◯", "●",  "WEB", "web browser"],
+  [ 3, "◎", "◉",  "WEB", "web browser"],
   [ 4, "▽", "▼", "NOTE", "writing"],
   [ 5, "◁", "◀", "CHAT", "comms"],
   [ 6, "△", "▲",  "DES", "design"],
   [ 7, "▷", "▶",  "FUN", "games"],
   [ 8, "◇", "◆",  "SYS", "system"],
-  [ 9, "▫", "▪",  "DIR", "files"],
-  [10, "◦", "▪",   "二", "ni"]
+  [ 9, "◯", "●",  "DIR", "files"],
+  [10, "◯", "●",   "二", "ni"]
   ]')
 
 (defwidget _workspaces []
@@ -43,6 +43,7 @@
     :spacing 32
     :hexpand true
     :halign "center"
+    :style "letter-spacing: 0.1em;"
     (for wsp in allworkspaces
       (eventbox
         :cursor {activeworkspace.id == wsp[0] ? "default" : "pointer"} 

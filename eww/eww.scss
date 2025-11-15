@@ -163,7 +163,8 @@ $jetto: JetBrainsMonoNerdFontMono;
     &:hover, &:hover:focus {
       background: rgba($kuro-black-light, 1);
       color: $kuro-white-light;
-      opacity: 0.9;
+      opacity: 1;
+      font-weight: 900;
     }
 
     &:focus {
@@ -175,19 +176,13 @@ $jetto: JetBrainsMonoNerdFontMono;
     }
   }
 
-  .active-wsp {
-    color: $kuro-yellow-dark;
-    background: rgba($kuro-black-dark, 1);
-    font-weight: 900;
+  .active-wsp,
+  .active-wsp:hover,
+  .active-wsp:focus {
+    color: $kuro-black-dark;
+    background: rgba($kuro-white-light, 1);
     opacity: 1;
-    border: 3 solid rgba($kuro-black-dark, 1);
-
-    &:hover, &:focus {
-      color: $kuro-yellow-dark;
-      background: rgba($kuro-black-dark, 1);
-      opacity: 1;
-      border: 3 solid rgba($kuro-black-dark, 1);
-    }
+    border: 3 solid rgba($kuro-white-light, 1);
   }
 }
 
