@@ -19,10 +19,12 @@
       :space-evenly false
       (label
         :class "aw-class"
+        :style "font-weight: 900; color: ${kuro-white-light};"
         :text "${replace("${active-window.class}", "\\w+\\.", "")}" ; NOTE: use \\ as the escape
         )
       (label
         :class "aw-title"
+        :style "font-weight: 200; color: ${kuro-white-dark};"
         :text "${replace("${active-window.title}", " (—|-) (\\w|\\s)+$", "")}" ; NOTE: remove class name
         )
       )

@@ -35,6 +35,7 @@
       :height 40
       :halign "center"
       :xalign 0.5
+      :style "color: ${kuro-white-light};"
       :text ""
       )
     (label 

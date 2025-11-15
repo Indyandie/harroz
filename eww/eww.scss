@@ -74,7 +74,7 @@ $jetto: JetBrainsMonoNerdFontMono;
   font-family: $jetto;
   background-color: transparent;
   font-size: 14px;
-  color: rgba($kuro-white-normal, 0.8);
+  color: rgba($kuro-white-normal, 1);
 
   .chronic,
   .system,
@@ -92,13 +92,8 @@ $jetto: JetBrainsMonoNerdFontMono;
   /* background: orange; */
   /* } */
   .active-window {
-    .aw-class {
-      font-weight: 900;
-      color: rgba($kuro-white-light, 0.8);
-    }
-    .aw-title {
-      font-weight: 600;
-    }
+    .aw-class {}
+    .aw-title {}
   }
 }
 
@@ -113,25 +108,19 @@ $jetto: JetBrainsMonoNerdFontMono;
 }
 
 .volume.button {
-  background: $kuro-red-dark;
+  background: $kuro-white-dark;
 }
 
-/* .battery { */
-/* background: red; */
-/* } */
-
 .bat-charging {
-  color: #e5ca65;
   color: $kuro-yellow-dark;
 }
 
 .bat-full {
-  color: #83e565;
   color: $kuro-green-dark;
 }
 
 .bat-low {
-  color: $kuro-red-light;
+  color: $kuro-red-dark;
 }
 
 .wifi {
@@ -204,22 +193,16 @@ $jetto: JetBrainsMonoNerdFontMono;
 
 .volume {
   padding: 0;
-  color: $kuro-white-normal;
 
   button {
-    .icon {
-      /* background: red; */
-    }
+    .icon {}
   }
 
   .mute {
-    .icon {
-      color: $kuro-red-dark;
-    }
+    .icon {}
   }
 
   .value {
-    color: $kuro-white-dark;
     font-weight: 900;
   }
 
@@ -242,14 +225,14 @@ $jetto: JetBrainsMonoNerdFontMono;
 }
 
 .volume scale trough highlight {
-  background: $kuro-blue-normal;
+  background: $kuro-white-light;
   border: 0;
   border-radius: 10px;
   padding: 0;
 }
 
 .volume scale trough {
-  background: #4e4e4e;
+  background: $kuro-black-light;
   border-radius: 10px;
   min-height: 8px;
   min-width: 7px;
@@ -262,7 +245,7 @@ $jetto: JetBrainsMonoNerdFontMono;
 .light-stat {
   all: unset;
   background: rgba($kuro-black-dark, 0.5);
-  border: 2 solid rgba($kuro-white-normal, 0.1);
+  border: 3 solid rgba($kuro-white-dark, 0.3);
   padding: 16px 16px 24px;
   border-radius: 16px;
 
@@ -281,18 +264,18 @@ $jetto: JetBrainsMonoNerdFontMono;
 
       slider {
         border: 0;
-        background: rgba($kuro-black-normal, 0);
+        background: rgba($kuro-black-dark, 0);
       }
 
       trough highlight {
-        background: rgba($kuro-green-dark, 1);
+        background: rgba($kuro-white-light, 1);
         border: 0;
         border-radius: 10px;
       }
 
       trough {
         padding: 0;
-        background: $kuro-black-normal;
+        background: $kuro-black-light;
         border-radius: 50px;
         min-height: 12px;
         min-width: 112px;
@@ -305,7 +288,7 @@ $jetto: JetBrainsMonoNerdFontMono;
   .box {
     scale {
       trough highlight {
-        background: rgba($kuro-blue-dark, 1);
+        /* background: rgba($kuro-blue-dark, 1); */
       }
     }
   }
@@ -315,7 +298,7 @@ $jetto: JetBrainsMonoNerdFontMono;
   .box {
     scale {
       trough highlight {
-        background: rgba($kuro-yellow-dark, 1);
+        /* background: rgba($kuro-yellow-dark, 1); */
       }
     }
   }

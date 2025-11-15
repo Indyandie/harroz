@@ -19,7 +19,7 @@
 (defwidget _blue []
   (box
     :class "wifi"
-    :style {bluetooth-status != "Powered: yes" ? "opacity: .40;" : ""}
+    :style {bluetooth-status != "Powered: yes" ? "color: ${kuro-white-dark}; opacity: 0.7;" : "color: ${kuro-white-normal};"}
     :tooltip {
         bluetooth-device-count > 0 ? "${replace(bluetooth-device-one, "Device [A-Z0-9:]+", "")}" :
         bluetooth-status == "Powered: yes" ? "On" :

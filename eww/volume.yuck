@@ -28,10 +28,12 @@
           (label
             :class "value" 
             :xalign 1
-            :text {vol-info[1] == "off" ? "muted" : "${vol-info[0]}%"})
+            :style {vol-info[1] == "off" ? "opacity: 0.4; color: ${kuro-white-dark};" : ""}
+            :text {vol-info[1] == "off" ? "${vol-info[0]}% (muted)" : "${vol-info[0]}%"}
+            )
           (revealer
             :reveal {vol-info[1] == "off" ? false : true}
-            :duration "50ms"
+            :duration "900ms"
             :transition "slideleft"
             (eventbox
               :cursor "pointer"
@@ -49,18 +51,24 @@
             )
           )
         )
+      (eventbox
+        :cursor "pointer"
       (button 
         :class {vol-info[1] == "off" ? "button mute" : "button"}
         :onclick "amixer set Master 1+ toggle"
+        :cursor "pointer"
         (label
-          :class "icon"
-          :text {
-          vol-info[1] == "off" ? "" :
-          vol-info[0] >  66 ? "" :
-          vol-info[0] >  33 ? "" :
-          vol-info[0] > 0 ? "" :
-          ""
-          })
+        :class "icon"
+        :style { vol-info[1] == "off" ? "color: ${kuro-white-dark}; opacity: 0.7;" : "color: ${kuro-white-normal};" }
+        :text {
+              vol-info[1] == "off" ? "" :
+              vol-info[0] >  66 ? "" :
+              vol-info[0] >  33 ? "" :
+              vol-info[0] > 0 ? "" :
+              ""
+            }
+          ) 
+        )
         )
       )
     )
@@ -97,9 +105,9 @@
       :height 40
       :halign "center"
       :xalign 0.5
-      :text {
-      vol-info[1] == "off" ? "" : ""
-      })
+      :style { vol-info[1] == "off" ? "color: ${kuro-white-dark}; opacity: 0.5" : "color: ${kuro-white-light};" }
+      :text { vol-info[1] == "off" ? "" : "" }
+      )
     (label 
       :visible false
       :text "${vol-stat-timer} ${vol-stat-ticker}"
@@ -112,6 +120,7 @@
       ; :width 72
       :value "${vol-info[0]}"
       :draw-value false
+      :style { vol-info[1] == "off" ? "opacity: 0.5" : "opacity: 1" }
       )
     )
   )
