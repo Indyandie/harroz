@@ -88,6 +88,49 @@
             :text "${round(EWW_TEMPS["CROS_EC_CPU@4C"], 2)}°"
             )
           )
+        (box
+          :class "disk"
+          :tooltip "Disk Usage"
+          :hexpand false
+          :spacing 16
+          :space-evenly false
+          (label
+            :class "icon"
+            :text ""
+            )
+          (box
+            :hexpand false
+            :spacing 8
+            :space-evenly false
+            :tooltip "Main Disk"
+            (label
+              :class "sys-stats-value"
+              :style "font-size: ${counter-font-size}; font-weight: 900; color: ${kuro-white-dark}"
+              :text "/"
+              )
+            (label
+              :class "sys-stats-value"
+              :style "font-size: ${counter-font-size};"
+              :text "${round(EWW_DISK["/"]["used_perc"], 2)}%"
+              )
+            )
+          (box
+            :hexpand false
+            :spacing 8
+            :space-evenly false
+            :tooltip "Boot Disk"
+            (label
+              :class "sys-stats-value"
+              :style "font-size: ${counter-font-size}; font-weight: 900; color: ${kuro-white-dark}"
+              :text "boot"
+              )
+            (label
+              :class "sys-stats-value"
+              :style "font-size: ${counter-font-size};"
+              :text "${round(EWW_DISK["/boot"]["used_perc"], 2)}%"
+              )
+            )
+          )
         )
       (box
         :class "systray"

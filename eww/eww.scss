@@ -56,14 +56,15 @@ $jetto: JetBrainsMonoNerdFontMono;
 
     .cpu,
     .ram,
-    .temp {
+    .temp,
+    .disk {
       .icon {
-        color: rgba($kuro-white-dark, 1);
+        color: rgba($kuro-white-light, 1);
         font-weight: 900;
         font-size: 18px;
       }
       .sys-stats-value {
-        font-weight: 900;
+        /* font-weight: 600; */
       }
     }
   }
