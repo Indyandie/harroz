@@ -28,6 +28,7 @@
     :transition "slideup"
     :reveal show-tray
     :duration "4ms"
+    :style "letter-spacing: 0.1em;"
     (box
       :class "tray-box"
       :hexpand true

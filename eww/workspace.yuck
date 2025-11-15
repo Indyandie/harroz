@@ -41,7 +41,6 @@
     :class {activeworkspace.hasfullscreen ? "fullscreen wsp-box" : "wsp-box"}
     :space-evenly false
     :spacing 32
-    :height 48
     :hexpand true
     :halign "center"
     (for wsp in allworkspaces
@@ -49,14 +48,16 @@
         :cursor {activeworkspace.id == wsp[0] ? "default" : "pointer"} 
         (button
             :active true
-            :height 48
+            :height 32
             :tooltip "${wsp[4]}"
             :class {activeworkspace.id == wsp[0] ? "active-wsp wsp-btn" : "wsp-btn"} 
             :onclick "hyprctl dispatch workspace ${wsp[0]} && eww close workspaces"
             (box
               :valign "center"
               :halign "center"
-              :spacing 6
+              :hexpand false
+              :spacing 8
+              :space-evenly false
               (label
                 :class "icon"
                 :text {matches(hyprworkspaces, '"id": ${wsp[0]},') ? "${wsp[2]}" : wsp[1]} 
