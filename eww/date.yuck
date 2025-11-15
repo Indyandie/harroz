@@ -1,3 +1,4 @@
+; https://docs.rs/chrono/latest/chrono/format/strftime/index.html
 (defvar show-fulldate false)
 
 (defwidget _date []
@@ -17,7 +18,7 @@
         :duration "300ms"
         :hexpand false
         (label
-          :text "${formattime(EWW_TIME, "%T %b %m")}"
+          :text "${formattime(EWW_TIME, "%R %b %m")}"
           )
         )
       (revealer
