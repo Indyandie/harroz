@@ -53,13 +53,10 @@
               )
           )
         )
-      (eventbox
-        :cursor "pointer"
-        (label
-          :class "icon"
-          :text ""
-          ) 
-        )
+      (label
+        :class "icon"
+        :text ""
+        ) 
       )
     )
   )
