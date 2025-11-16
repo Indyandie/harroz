@@ -57,6 +57,7 @@
         :space-evenly false
         :spacing 16
         (_volume)
+        (_light)
         (_blue)
         (_network)
         (_battery)

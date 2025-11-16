@@ -13,6 +13,56 @@
   "LIGHTSTATTIMER=`eww get light-stat-timer`; if [ $LIGHTSTATTIMER -gt 0 ]; then eww update light-stat-timer=`expr $LIGHTSTATTIMER - 1`; else eww update light-stat-timer=0; eww close light-stat; fi;"
   )
 
+(defvar show-light-slider false)
+
+(defwidget _light []
+  (eventbox 
+    :onhover "eww update show-light-slider=true"
+    :onhoverlost "eww update show-light-slider=false"
+    (box 
+      :orientation "h"
+      :halign "end"
+      :class "light"
+      :space-evenly false
+      :hexpand false
+      (revealer
+        :reveal show-light-slider
+        :duration "100ms"
+        :transition "slideleft"
+        (box
+          :hexpand false
+          :spacing 4
+          :space-evenly false
+          (label
+            :class "value" 
+            :xalign 1
+            :text "${round(light-info, 0)}%"
+            )
+            (eventbox
+              :cursor "pointer"
+              (scale
+                :orientation "h"
+                :timeout "500ms"
+                :min 0
+                :max 101
+                :width 100
+                :value "${light-info}"
+                :draw-value false
+                :onchange 'brightnessctl -d "amdgpu_bl1" set {}%'
+                )
+              )
+          )
+        )
+      (eventbox
+        :cursor "pointer"
+        (label
+          :class "icon"
+          :text ""
+          ) 
+        )
+      )
+    )
+  )
 (defwindow light-stat 
   :exclusive true
   :monitor 0

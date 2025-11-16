@@ -210,30 +210,33 @@ $jetto: JetBrainsMonoNerdFontMono;
   }
 }
 
-.volume slider {
-  background: $kuro-white-light;
-  border: 0;
-  padding: 0;
-  margin: -6px;
-  min-height: 2px;
-  min-width: 2px;
-}
+.volume,
+.light {
+  slider {
+    background: $kuro-white-light;
+    border: 0;
+    padding: 0;
+    margin: -6px;
+    min-height: 2px;
+    min-width: 2px;
+  }
 
-.volume scale trough highlight {
-  background: $kuro-white-light;
-  border: 0;
-  border-radius: 10px;
-  padding: 0;
-}
+  scale trough highlight {
+    background: $kuro-white-light;
+    border: 0;
+    border-radius: 10px;
+    padding: 0;
+  }
 
-.volume scale trough {
-  background: $kuro-black-light;
-  border-radius: 10px;
-  min-height: 8px;
-  min-width: 7px;
-  // margin-right: 8px;
-  margin: 0;
-  padding: 0;
+  scale trough {
+    background: $kuro-black-light;
+    border-radius: 10px;
+    min-height: 8px;
+    min-width: 7px;
+    // margin-right: 8px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .vol-stat,
