@@ -17,10 +17,15 @@
       :class "active-window"
       :spacing 12
       :space-evenly false
-      (label
-        :class "aw-class"
-        :style "font-weight: 900; color: ${kuro-white-light};"
-        :text "${replace("${active-window.class}", "\\w+\\.", "")}" ; NOTE: use \\ as the escape
+      (eventbox
+        :cursor "pointer"
+        :onclick "eww open workspaces && eww update show-workspaces=true"
+        :tooltip "Open workspaces"
+        (label
+          :class "aw-class"
+          :style "font-weight: 900; color: ${kuro-white-light};"
+          :text "${replace("${active-window.class}", "\\w+\\.", "")}" ; NOTE: use \\ as the escape
+          )
         )
       (label
         :class "aw-title"

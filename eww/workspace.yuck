@@ -3,6 +3,8 @@
   "hyprctl -j activeworkspace"
   )
 
+(defvar show-workspaces false)
+
 (defwindow workspaces
   :exclusive true
   :monitor 0
@@ -15,7 +17,12 @@
     ; :height 300
     :anchor "top center")
   :class "workspaces"
-  (_workspaces)
+  (revealer
+    :style "letter-spacing: 0.1em;"
+    :transition "slidedown"
+    :reveal show-workspaces
+    :duration "400ms"
+  (_workspaces))
   )
 
 (defpoll hyprworkspaces
@@ -35,6 +42,7 @@
   [ 9, "◯", "●",  "DIR", "files"],
   [10, "◯", "●",   "二", "ni"]
   ]')
+
 
 (defwidget _workspaces []
   (box
