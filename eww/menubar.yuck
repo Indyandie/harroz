@@ -9,7 +9,7 @@
 
 ; main
 (defwindow menubar
-  :exclusive false
+  :exclusive true
   :monitor 0
   :stacking "overlay"
   :geometry (geometry 
@@ -38,7 +38,7 @@
     :duration "400ms"
     (centerbox
       :class "layout-box"
-      :style "padding: 8px 8px 32px; background: transparent;"
+      :style "padding: 8px 8px 24px; background: transparent;"
       :hexpand true
       :halign "fill" ;center ignores hexpand
       (box
