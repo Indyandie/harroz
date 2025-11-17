@@ -1,6 +1,6 @@
-# harroz
+# 🍚 harroz
 
-Hyprland config
+Hyprland config and plain linux rice.
 
 ## Resources
 
@@ -21,19 +21,19 @@ Hyprland config
 
 ## To Do
 
-- [ ] Add plugins
+- [ ] Use [plugins](https://wiki.hypr.land/Plugins/Using-Plugins/#installing--using-plugins)
+- [ ] hyprland - minimize workspace (special)
+- [ ] hyprland - document keybinds
+- [ ] hyprland - zoom/magnify gesture
 - [ ] eww - notifications dunst widget (dunstctl)
 - [x] eww - move workspace to menubar
 - [x] eww - migrate from version `4` to `6`
 - [x] eww - implement systray
   - [x] archive waybar
-- [ ] hyprland - minimize workspace (special)
-- [ ] hyprland pin clients
-  - [ ] corners (`33%` width)
-  - [ ] reading (`50%` left or right side)
-- [ ] hyprland - zoom/magnify
-- [ ] hyprland - document keybinds
-- [ ] hyprcurso -
+- [x] hyprland pin clients
+  - [x] corners (`33%` width)
+  - [x] reading (`50%` left or right side)
+- [x] hyprcursor
 
 ---
 
@@ -45,25 +45,12 @@ Hyprland config
 
 - [rose-pine/cursor](https://github.com/rose-pine/cursor)
 
-### Media
-
-- [pamixer](https://github.com/cdemoulins/pamixer)
-
 ## Investigate
 
-### Plugins
+### Hyprland Plugins
 
-- [Hyprshot](https://github.com/Gustash/Hyprshot)
+- [hyprscrolling](https://github.com/hyprwm/hyprland-plugins/tree/main/hyprscrolling)
 
 ### Application Launcher
 
-- [Onagre](https://github.com/oknozor/onagre)
-- [yofi](https://github.com/l4l/yofi?tab=readme-ov-file)
-
-### Bar
-
-- [ironbar](https://github.com/JakeStanger/ironbar)
-
-### Notifications
-
-- [Sway Notification Center](https://github.com/ErikReider/SwayNotificationCenter)
+- [hyprlauncher](https://wiki.hypr.land/Hypr-Ecosystem/hyprlauncher/)
