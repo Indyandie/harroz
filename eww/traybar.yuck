@@ -90,6 +90,29 @@
             )
           )
         (box
+          :class "battery"
+          :tooltip "Batter Charge"
+          :hexpand false
+          :spacing 8
+          :space-evenly false
+          (label
+            :class "icon"
+            :text {
+                EWW_BATTERY.total_avg == 100.0 ? "" :
+                EWW_BATTERY.total_avg > 90 ? "" :
+                EWW_BATTERY.total_avg > 75 ? "" :
+                EWW_BATTERY.total_avg > 50 ? "" :
+                EWW_BATTERY.total_avg > 25 ? "" :
+                EWW_BATTERY.total_avg > 10 ? "" :
+              "" }
+            )
+          (label
+            :class "sys-stats-value"
+            :style "font-size: ${counter-font-size};"
+            :text "${round(EWW_BATTERY.total_avg, 2)}%"
+            )
+          )
+        (box
           :class "disk"
           :tooltip "Disk Usage"
           :hexpand false
