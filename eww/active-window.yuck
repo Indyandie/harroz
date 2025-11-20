@@ -32,6 +32,7 @@
         :style "font-weight: 200; color: ${kuro-white-dark};"
         :limit-width 64
         :text "${replace("${active-window.title}", " (—|-) (\\w|\\s)+$", "")}" ; NOTE: remove class name
+        :tooltip "${active-window.title}"
         )
       )
     )
