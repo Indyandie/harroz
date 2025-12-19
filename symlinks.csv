@@ -31,3 +31,5 @@ link,confdir,conf
 /rofi/emoji-grid.rasi,/.config/rofi/,emoji-grid.rasi
 /rofi/config-run.rasi,/.config/rofi/,config-run.rasi
 /electron/electron-flags.conf,/.config/,electron-flags.conf
+/hyprshell/config.ron,/.config/hyprshell/,config.ron
+/hyprshell/styles.css,/.config/hyprshell/,styles.css
