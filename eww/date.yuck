@@ -18,7 +18,7 @@
         :duration "300ms"
         :hexpand false
         (label
-          :text "${formattime(EWW_TIME, "%R %b %m")}"
+          :text "${formattime(EWW_TIME, "%R %b %d")}"
           )
         )
       (revealer
@@ -26,7 +26,7 @@
         :transition "slideright"
         :duration "300ms"
         (label
-          :text "${formattime(EWW_TIME, "%A %B %m, %Y %T")}"
+          :text "${formattime(EWW_TIME, "%A %B %d, %Y %T")}"
           )
         )
       )
