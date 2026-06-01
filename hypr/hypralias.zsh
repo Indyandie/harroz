@@ -1,3 +1,3 @@
 if command -v Hyprland &>/dev/null; then
-    alias HPR="Hyprland"
+    alias HPR="start-hyprland"
 fi
