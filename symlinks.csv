@@ -11,6 +11,7 @@ link,confdir,conf
 /hypr/hyprsunset/hyprsunset.conf,/.config/hypr/,hyprsunset.conf
 /wallpaper/ascending-waves.png,/.config/hypr/wallpaper/,wallpaper01.png
 /eww/hypreww.conf,/.config/hypr/,hypreww.conf
+/eww/hypreww.lua,/.config/hypr/,hypreww.lua
 /eww/battery.yuck,/.config/eww/,battery.yuck
 /eww/eww.yuck,/.config/eww/,eww.yuck
 /eww/theme.yuck,/.config/eww/,theme.yuck

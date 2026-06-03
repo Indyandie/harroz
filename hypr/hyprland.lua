@@ -1,11 +1,9 @@
--- Hyprland Lua Config (0.55+) - CORRECTED BINDS
--- Following https://wiki.hypr.land/Configuring/Basics/Binds/
-
----- ------------
+--- ------------
 ---- VARIABLES ----
 ---- ------------
 
 local terminal = "ghostty"
+MAIN_MOD = "ALT"
 
 ---- ------------
 ---- MONITORS ----
@@ -50,6 +48,7 @@ hl.env("BEMOJI_PICKER_CMD", "rofi -dmenu -config ~/.config/rofi/emoji-grid.rasi"
 hl.env("HYPRSHELL_NO_USE_PLUGIN", "true")
 
 local kurokula = require("/kurokula")
+require("/hypreww")
 
 ---- -------------------
 ---- LOOK AND FEEL ----
@@ -130,7 +129,7 @@ hl.config({
     -- accel_profile = "custom 200 0.0 0.5"
   },
 
-  gestures    = {
+  gestures   = {
     workspace_swipe_distance = 20,
     workspace_swipe_min_speed_to_force = 10
   },
@@ -360,6 +359,7 @@ hl.gesture({
 })
 
 local zoom_level = 1.23
+
 hl.gesture({
   mods = "SHIFT + SUPER",
   fingers = 2,
@@ -369,6 +369,7 @@ hl.gesture({
   mode =
   "live"
 })
+
 hl.gesture({
   mods = "SHIFT + SUPER",
   fingers = 2,
