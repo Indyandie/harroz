@@ -1,6 +1,8 @@
 link,confdir,conf
 /hypr/hyprland.conf,/.config/hypr/,hyprland.conf
 /hypr/kurokula.conf,/.config/hypr/,kurokula.conf
+/hypr/hyprland.lua,/.config/hypr/,hyprland.lua
+/hypr/kurokula.lua,/.config/hypr/,kurokula.lua
 /hypr/hypralias.zsh,/.config/hypr/,hypralias.zsh
 /hypr/hyprpaper/hyprpaper.conf,/.config/hypr/,hyprpaper.conf
 /hypr/hyprlock/hyprlock.conf,/.config/hypr/,hyprlock.conf
