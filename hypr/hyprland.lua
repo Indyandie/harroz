@@ -457,3 +457,15 @@ hl.workspace_rule({ workspace = "w[1]", border_size = 0 })
 -- Drag and resize floating windows with mouse
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag())
 hl.bind("SUPER + SHIFT + mouse:272", hl.dsp.window.resize())
+
+hl.curve("overshoot", { type = "bezier", points = { { 0.5, 0.9 }, { 0.1, 1.1 } } })
+-- hl.curve( "rubber", { type = "spring", mass = 1, stiffness = 70, dampening = 10 } )
+
+hl.animation({
+  leaf = "specialWorkspace",
+  enabled = true,
+  bezier = "overshoot",
+  speed = 8,
+  curve = "default",
+  style = "slidefadevert"
+})
