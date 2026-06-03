@@ -47,7 +47,7 @@ hl.env("VID_DEFAULT_DIR", os.getenv("HOME") .. "/Videos/Screencasts")
 hl.env("BEMOJI_PICKER_CMD", "rofi -dmenu -config ~/.config/rofi/emoji-grid.rasi")
 hl.env("HYPRSHELL_NO_USE_PLUGIN", "true")
 
-local kurokula = require("/kurokula")
+require("/kurokula")
 require("/hypreww")
 
 ---- -------------------
@@ -207,11 +207,21 @@ local CP_PNG = "wl-copy -t image/png"
 
 -- Volume & Media
 local VOL_CHANGE = "${FREE_SOUNDS}audio-volume-change.oga"
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pamixer -i 5 && play " .. VOL_CHANGE .. ""),
-  { repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("pamixer -d 5 && play " .. VOL_CHANGE .. ""),
-  { repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("play $BELL reverse && pamixer -t && play $BELL"))
+
+hl.bind(
+  "XF86AudioRaiseVolume",
+  hl.dsp.exec_cmd("pamixer -i 5 && play " .. VOL_CHANGE .. ""),
+  { repeating = true }
+)
+hl.bind(
+  "XF86AudioLowerVolume",
+  hl.dsp.exec_cmd("pamixer -d 5 && play " .. VOL_CHANGE .. ""),
+  { repeating = true }
+)
+hl.bind(
+  "XF86AudioMute",
+  hl.dsp.exec_cmd("play " .. BELL .. " reverse && pamixer -t && play " .. BELL)
+)
 
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
@@ -283,17 +293,50 @@ hl.bind("", hl.dsp.exec_cmd("" .. WFR_CHECK .. " && " .. WFR_KILL .. " && " .. W
 ---- WINDOW RULES ----
 ---- -------------------
 
-hl.window_rule({ match = { class = "^(floorp)$" }, workspace = 1 })
-hl.window_rule({ match = { class = "^(Alacritty)$" }, workspace = 2 })
-hl.window_rule({ match = { class = ".*(ghostty)" }, workspace = 2 })
-hl.window_rule({ match = { class = "^((B|b)rave-browser)$" }, workspace = 3 })
-hl.window_rule({ match = { class = "^(obsidian)$" }, workspace = 4 })
-hl.window_rule({ match = { title = "^(Signal)$" }, workspace = 5 })
-hl.window_rule({ match = { class = "^(Proton Mail)$" }, workspace = 5 })
-hl.window_rule({ match = { title = "^(Steam)$" }, workspace = 7 })
-hl.window_rule({ match = { initial_title = ".*\\[Locked\\].*" }, workspace = 8 })
-hl.window_rule({ match = { class = "^(thunar)$" }, workspace = 9 })
-hl.window_rule({ match = { class = "^(com.*Celeste)$" }, workspace = 9 })
+hl.window_rule({
+  match = { class = "^(floorp)$" },
+  workspace = 1
+})
+hl.window_rule({
+  match = { class = "^(Alacritty)$" },
+  workspace = 2
+})
+hl.window_rule({
+  match = { class = ".*(ghostty)" },
+  workspace = 2
+})
+hl.window_rule({
+  match = { class = "^((B|b)rave-browser)$" },
+  workspace = 3
+})
+hl.window_rule({
+  match = { class = "^(obsidian)$" },
+  workspace = 4
+})
+hl.window_rule({
+  match = { title = "^(Signal)$" },
+  workspace = 5
+})
+hl.window_rule({
+  match = { class = "^(Proton Mail)$" },
+  workspace = 5
+})
+hl.window_rule({
+  match = { title = "^(Steam)$" },
+  workspace = 7
+})
+hl.window_rule({
+  match = { initial_title = ".*\\[Locked\\].*" },
+  workspace = 8
+})
+hl.window_rule({
+  match = { class = "^(thunar)$" },
+  workspace = 9
+})
+hl.window_rule({
+  match = { class = "^(com.*Celeste)$" },
+  workspace = 9
+})
 
 hl.window_rule({ match = { title = "^Rename.*" }, float = true })
 hl.window_rule({ match = { class = "nm-connection-editor" }, float = true })
@@ -329,16 +372,27 @@ hl.window_rule({
   center = true
 })
 
+local mon_w = "monitor_w"
+local mon_h = "monitor_h"
+local pip_scale = 0.4
+local pip_gap = 32
+
 hl.window_rule({
   match = { title = "^((P|p)icture(-| )in(-| )(P|p)icture)$" },
   keep_aspect_ratio = true,
-  opacity = 0.5,
-  size = "33.333%, 33.333%",
+  opacity = 0.52,
+  size = {
+    "(" .. mon_w .. "*" .. pip_scale .. ")",
+    "(" .. mon_h .. "*" .. pip_scale .. ")"
+  },
+  move = {
+    "(" .. mon_w .. " - (" .. mon_w .. " * " .. pip_scale .. " + " .. pip_gap .. "))",
+    "(" .. mon_h .. " - (" .. mon_h .. " * " .. pip_scale .. " + " .. pip_gap .. "))"
+  },
   float = true,
   pin = true,
-  move = "100%, w-20",
   border_size = 0,
-  no_initial_focus = true
+  -- no_initial_focus = true
 })
 
 hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, float = true })
@@ -380,22 +434,24 @@ hl.gesture({
   mode = "live"
 })
 
-hl.on("hyprland.start", function()
-  hl.exec_cmd("hyprpaper")
-  hl.exec_cmd("dunst")
-  hl.exec_cmd("mullvad connect")
-  hl.exec_cmd("flatpak run com.dropbox.Client")
-  hl.exec_cmd("keepassxc")
-  hl.exec_cmd("sleep 4 && ghostty")
-  hl.exec_cmd("syncthing")
-  hl.exec_cmd("hypridle")
-  hl.exec_cmd("wl-paste --type text --watch cliphist store")
-  hl.exec_cmd("wl-paste --type image --watch cliphist store")
-  hl.exec_cmd("hyprsunset")
-end)
+hl.on("hyprland.start",
+  function()
+    hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("dunst")
+    hl.exec_cmd("mullvad connect")
+    hl.exec_cmd("flatpak run com.dropbox.Client")
+    hl.exec_cmd("keepassxc")
+    hl.exec_cmd("sleep 4 && ghostty")
+    hl.exec_cmd("syncthing")
+    hl.exec_cmd("hypridle")
+    hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    hl.exec_cmd("wl-paste --type image --watch cliphist store")
+    hl.exec_cmd("hyprsunset")
+  end
+)
 
 hl.workspace_rule({ workspace = "special:special", border_size = 4, gaps_in = 4, gaps_out = 36 })
-hl.workspace_rule({ workspace = "w[1]", border_size = 1 })
+hl.workspace_rule({ workspace = "w[1]", border_size = 0 })
 
 
 -- Drag and resize floating windows with mouse

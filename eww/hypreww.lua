@@ -3,27 +3,55 @@
 
 
 -- exec-once = eww open-many menubar traybar
-hl.exec_cmd("eww open-many menubar traybar")
+hl.on("hyprland.start",
+  function()
+    hl.exec_cmd("eww open-many menubar traybar")
+  end
+)
 
 -- # Workspaces
 
 hl.bind("SUPER + down",
   hl.dsp.exec_cmd(
-    "hyprctl activewindow -j | rg '\"name\": \"special:special\"' && hyprctl dispatch togglespecialworkspace || eww update show-workspaces=false && eww close workspaces || eww open workspaces && eww update show-workspaces=true"))
-hl.bind("SUPER + up", hl.dsp.exec_cmd("eww active-windows | rg workspaces: && eww close workspaces"))
-hl.bind("escape", hl.dsp.exec_cmd("eww update show-workspaces=false && eww close workspaces"), { non_consuming = true })
-hl.bind(MAIN_MOD .. " + SHIFT + L", hl.dsp.exec_cmd("eww update activeworkspace=`hyprctl activeworkspace -j`\"\""),
-  { non_consuming = true })
-hl.bind(MAIN_MOD .. " + SHIFT + H", hl.dsp.exec_cmd("eww update activeworkspace=`hyprctl activeworkspace -j`\"\""),
-  { non_consuming = true })
+    "hyprctl activewindow -j | rg '\"name\": \"special:special\"' && hyprctl dispatch togglespecialworkspace || eww update show-workspaces=false && eww close workspaces || eww open workspaces && eww update show-workspaces=true")
+)
+hl.bind(
+  "SUPER + up",
+  hl.dsp.exec_cmd("eww active-windows | rg workspaces: && eww close workspaces")
+)
+hl.bind(
+  "escape",
+  hl.dsp.exec_cmd("eww update show-workspaces=false && eww close workspaces"),
+  { non_consuming = true }
+)
+hl.bind(
+  MAIN_MOD .. " + SHIFT + L",
+  hl.dsp.exec_cmd("eww update activeworkspace=`hyprctl activeworkspace -j`\"\""),
+  { non_consuming = true }
+)
+hl.bind(
+  MAIN_MOD .. " + SHIFT + H",
+  hl.dsp.exec_cmd("eww update activeworkspace=`hyprctl activeworkspace -j`\"\""),
+  { non_consuming = true }
+)
 
 
-hl.bind("SUPER + down",
+hl.bind(
+  "SUPER + down",
   hl.dsp.exec_cmd(
-    "hyprctl activewindow -j | rg '\"name\": \"special:special\"' && hyprctl dispatch togglespecialworkspace || eww update show-workspaces=false && eww close workspaces || eww open workspaces && eww update show-workspaces=true"))
-hl.bind("SUPER + up", hl.dsp.exec_cmd("eww active-windows | rg workspaces: && eww close workspaces"))
-hl.bind("escape", hl.dsp.exec_cmd("eww update show-workspaces=false && eww close workspaces"), { non_consuming = true })
-hl.bind(MAIN_MOD .. " + SHIFT + L",
+    "hyprctl activewindow -j | rg '\"name\": \"special:special\"' && hyprctl dispatch togglespecialworkspace || eww update show-workspaces=false && eww close workspaces || eww open workspaces && eww update show-workspaces=true")
+)
+hl.bind(
+  "SUPER + up",
+  hl.dsp.exec_cmd("eww active-windows | rg workspaces: && eww close workspaces")
+)
+hl.bind(
+  "escape",
+  hl.dsp.exec_cmd("eww update show-workspaces=false && eww close workspaces"),
+  { non_consuming = true }
+)
+hl.bind(
+  MAIN_MOD .. " + SHIFT + L",
   hl.dsp.exec_cmd("eww update activeworkspace=`hyprctl activeworkspace -j`"),
   { non_consuming = true }
 )
@@ -69,10 +97,12 @@ hl.bind(
   hl.dsp.exec_cmd(
     "test `eww get light-stat-timer` -eq 0 && eww update light-stat-timer=3 && eww open light-stat || eww update light-stat-timer=3"
   ),
-  { repeating = true, locked = true })
+  { repeating = true, locked = true }
+)
 hl.bind(
   "XF86MonBrightnessDown",
   hl.dsp.exec_cmd(
     "test `eww get light-stat-timer` -eq 0 && eww update light-stat-timer=3 && eww open light-stat || eww update light-stat-timer=3"
   ),
-  { repeating = true, locked = true })
+  { repeating = true, locked = true }
+)

@@ -3,7 +3,7 @@
 -- Converted from kurokula.conf for Hyprland 0.55+
 -- =============================================
 
-local kurokula           = {}
+kurokula           = {}
 
 -- --- Reds ---
 kurokula.RED_NORMAL      = "D23E08"
@@ -74,4 +74,4 @@ kurokula.ACTIVE_BORDER   = "rgba(" ..
 kurokula.RED_LIGHT .. "dd) rgba(" .. kurokula.RED_NORMAL .. "cc) rgba(" .. kurokula.RED_DARK .. "aa) 25deg"
 kurokula.INACTIVE_BORDER = "rgba(" .. kurokula.WHITE_DARK .. "33)"
 
-return kurokula
+-- return kurokula
