@@ -437,6 +437,7 @@ hl.gesture({
 hl.on("hyprland.start",
   function()
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("hyprshell")
     hl.exec_cmd("dunst")
     hl.exec_cmd("mullvad connect")
     hl.exec_cmd("flatpak run com.dropbox.Client")
