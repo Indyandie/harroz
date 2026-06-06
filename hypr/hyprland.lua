@@ -105,7 +105,7 @@ hl.config({
     exit_window_retains_fullscreen = true,
     enable_swallow = true,
     swallow_regex = "^(Alacritty)$",
-    on_focus_under_fullscreen = 0,
+    on_focus_under_fullscreen = 1,
   },
 
   dwindle    = { preserve_split = true, special_scale_factor = 1.0 },
@@ -137,6 +137,11 @@ hl.config({
   cursor     = { zoom_factor = 1.0, zoom_rigid = true, hide_on_key_press = true },
   xwayland   = { force_zero_scaling = true },
   debug      = { disable_logs = false },
+
+  binds      = {
+    movefocus_cycles_fullscreen = false,
+    focus_preferred_method = 1
+  }
 })
 
 ---- ------------
