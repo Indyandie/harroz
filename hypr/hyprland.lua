@@ -163,7 +163,7 @@ hl.bind("SUPER + CTRL + Q", hl.dsp.exit())
 hl.bind("ALT + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("ALT + SHIFT + F", hl.dsp.window.fullscreen())
 hl.bind("SUPER + F", hl.dsp.window.float())
-hl.bind("ALT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 3 }))
+hl.bind("ALT + F", hl.dsp.window.fullscreen_state({ action = "toggle", internal = 0, client = 3 }))
 
 hl.bind("SHIFT + SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
