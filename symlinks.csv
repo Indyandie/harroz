@@ -2,6 +2,8 @@ link,confdir,conf
 /hypr/hyprland.conf,/.config/hypr/,hyprland.conf
 /hypr/kurokula.conf,/.config/hypr/,kurokula.conf
 /hypr/hyprland.lua,/.config/hypr/,hyprland.lua
+/hypr/screen-capture.lua,/.config/hypr/,screen-capture.lua
+/swappy/config.ini,/.config/swappy/,config
 /hypr/kurokula.lua,/.config/hypr/,kurokula.lua
 /hypr/hypralias.zsh,/.config/hypr/,hypralias.zsh
 /hypr/hyprpaper/hyprpaper.conf,/.config/hypr/,hyprpaper.conf

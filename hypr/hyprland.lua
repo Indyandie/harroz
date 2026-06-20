@@ -5,6 +5,14 @@
 local terminal = "ghostty"
 MAIN_MOD = "ALT"
 
+--- ------------
+---- Import ----
+---- ------------
+
+require("/kurokula")
+require("/hypreww")
+require("/screen-capture")
+
 ---- ------------
 ---- MONITORS ----
 ---- ------------
@@ -46,9 +54,6 @@ hl.env("PIC_DEFAULT_DIR", os.getenv("HOME") .. "/Pictures/Screenshots")
 hl.env("VID_DEFAULT_DIR", os.getenv("HOME") .. "/Videos/Screencasts")
 hl.env("BEMOJI_PICKER_CMD", "rofi -dmenu -config ~/.config/rofi/emoji-grid.rasi")
 hl.env("HYPRSHELL_NO_USE_PLUGIN", "true")
-
-require("/kurokula")
-require("/hypreww")
 
 ---- -------------------
 ---- LOOK AND FEEL ----
@@ -171,7 +176,7 @@ hl.bind("SHIFT + SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 for i = 1, 10 do
   local key = (i == 10) and "0" or tostring(i)
   hl.bind("SUPER + " .. key, hl.dsp.focus({ workspace = i }))
-  hl.bind("SUPER + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+  hl.bind(MAIN_MOD .. "+ SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
 hl.bind("ALT + SHIFT + L", hl.dsp.focus({ workspace = "+1" }))
@@ -237,62 +242,6 @@ local BRIGHTNESS_DEVICE = "amdgpu_bl1"
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -d " .. BRIGHTNESS_DEVICE .. " set +5%"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -d " .. BRIGHTNESS_DEVICE .. " set 5%-"))
 
-local ACTIVE_WINDOW = 'hyprctl activewindow -j | jq -r \'"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])"\''
-
-local PLAY_SCR = "play " .. SCR_CAP
-local DATE_NOW = "$(date +%Y-%m-%dT%H:%M:%S%Z)"
-local GRM_NAME = "$(echo \"" .. DATE_NOW .. "-img.png\")"
-local GRM_OUT = "$PIC_DEFAULT_DIR/" .. GRM_NAME
-local GRM_NOTI = PLAY_SCR .. "&&" .. NOTIF .. "-a grim \"  Screen Capture\""
-local GRM_CP_NOTI = CP_PNG .. "&&" .. GRM_NOTI .. "Screenshot copied to pasteboard"
-
--- Screenshots (long commands)
-
-local SLURP = "XCURSOR_SIZE=200 slurp -b" ..
-    kurokula.BLACK_DARK ..
-    "60 -s" ..
-    kurokula.WHITE_DARK ..
-    "15 -c" .. kurokula.WHITE_DARK .. "80 -B" .. kurokula.WHITE_DARK .. "35" .. "-w 2 -F monospace -d"
-FULL_SLURP = "-g $(" .. SLURP .. "-r -o)"
-SEL_SLURP = "-g $(" .. SLURP .. ")"
-ACT_SLURP = "-g $(" .. ACTIVE_WINDOW .. "| " .. SLURP .. "-d -r)"
-
-hl.bind("SHIFT + SUPER + 3",
-  hl.dsp.exec_cmd("grim " .. FULL_SLURP .. " " .. GRM_OUT .. " && " .. GRM_NOTI .. ""))
-hl.bind("SUPER + CTRL + 3", hl.dsp.exec_cmd("grim " .. FULL_SLURP .. " - | " .. GRM_CP_NOTI))
-
-hl.bind("SHIFT + SUPER + 4",
-  hl.dsp.exec_cmd("grim " .. SEL_SLURP .. " " .. GRM_OUT .. " && " .. GRM_NOTI .. ""))
-hl.bind("SUPER + CTRL + 4", hl.dsp.exec_cmd("grim " .. SEL_SLURP .. " - | " .. GRM_CP_NOTI))
-
-hl.bind("SHIFT + SUPER + 5",
-  hl.dsp.exec_cmd("grim " .. ACT_SLURP .. " " .. GRM_OUT .. " && " .. GRM_NOTI .. ""))
-hl.bind("SUPER + CTRL + 5", hl.dsp.exec_cmd("grim " .. ACT_SLURP .. " - | " .. GRM_CP_NOTI))
-
--- Recording
-
-local PLAY_SCR = "play " .. SCR_CAP
-local DATE_NOW = "$(date +%Y-%m-%dT%H:%M:%S%Z)"
-local GRM_NAME = "$(echo " .. DATE_NOW .. "-img.png)"
-local GRM_OUT = "$PIC_DEFAULT_DIR/" .. GRM_NAME
-local GRM_NOTI = "$PLAY_SCR &&" .. NOTIF .. "-a grim \"  Screen Capture\""
-local GRM_CP_NOTI = CP_PNG .. "&&" .. GRM_NOTI .. "Screenshot copied to pasteboard"
-
--- env = VID_DEFAULT_DIR,$HOME/Videos/Screencasts
-local PLAY_GTG = "play" .. GTG
-local WFR_NOTI = PLAY_GTG .. "&&" .. NOTIF .. "-a wf-recorder \"  Screen Recorder\""
-local WFR_FL = "$VID_DEFAULT_DIR/$DATE_NOW-vid.mkv"
-local WFR = "wf-recorder -f"
-local WFR_CHECK = "pgrep wf-recorder"
-local WFR_KILL = 'killall -KILL wf-recorder'
-local WFR_SLURP = WFR ..
-    "-g \"$(" ..
-    SLURP .. "||" .. WFR_KILL .. "\")" -- wf-recorder defaulted to full screen without the kill
-
-hl.bind("SHIFT + SUPER + 6", hl.dsp.exec_cmd("$WFR " .. WFR_FL .. " " .. FULL_SLURP .. ""))
-hl.bind("SHIFT + SUPER + 7", hl.dsp.exec_cmd("$WFR " .. WFR_FL .. " " .. WFR_SLURP .. ""))
-hl.bind("", hl.dsp.exec_cmd("" .. WFR_CHECK .. " && " .. WFR_KILL .. " && " .. WFR_NOTI .. ""),
-  { release = true })
 
 ---- -------------------
 ---- WINDOW RULES ----
