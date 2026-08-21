@@ -2,7 +2,7 @@
 ---- VARIABLES ----
 ---- ------------
 
-local terminal = "ghostty"
+local terminal = "foot"
 MAIN_MOD = "ALT"
 
 --- ------------
@@ -160,7 +160,7 @@ hl.bind("SUPER + V",
   hl.dsp.exec_cmd("cliphist list | rofi -dmenu --pre-display-cmd \"echo '%s' | cut -f 2\" | cliphist decode | wl-copy"))
 hl.bind("SHIFT + SUPER + e", hl.dsp.exec_cmd("bemoji -t -c -n"))
 
-hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("alacritty"))
+hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SHIFT + Q", hl.dsp.exit())
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind("CTRL + Q", hl.dsp.window.close())
@@ -257,6 +257,10 @@ hl.window_rule({
 })
 hl.window_rule({
   match = { class = ".*(ghostty)" },
+  workspace = 2
+})
+hl.window_rule({
+  match = { class = ".*(" .. terminal .. ")" },
   workspace = 2
 })
 hl.window_rule({
@@ -396,7 +400,8 @@ hl.on("hyprland.start",
     hl.exec_cmd("mullvad connect")
     hl.exec_cmd("flatpak run com.dropbox.Client")
     hl.exec_cmd("keepassxc")
-    hl.exec_cmd("sleep 4 && ghostty")
+    -- hl.exec_cmd("sleep 4 && foot")
+    hl.exec_cmd("sleep 4 && " .. terminal .. "")
     hl.exec_cmd("syncthing")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
