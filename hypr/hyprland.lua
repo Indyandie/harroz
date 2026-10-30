@@ -171,11 +171,13 @@ hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SHIFT + Q", hl.dsp.exit())
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind("CTRL + Q", hl.dsp.window.close())
-hl.bind("SUPER + CTRL + Q", hl.dsp.exit())
 hl.bind("ALT + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("ALT + SHIFT + F", hl.dsp.window.fullscreen())
 hl.bind("SUPER + F", hl.dsp.window.float())
 hl.bind("ALT + F", hl.dsp.window.fullscreen_state({ action = "toggle", internal = 0, client = 3 }))
+
+-- EXIT/QUIT Hyprland
+hl.bind("CTRL + SUPER + CTRL + Q", hl.dsp.exit())
 
 hl.bind("SHIFT + SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 
