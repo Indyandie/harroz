@@ -30,9 +30,13 @@ hl.monitor({
 
 hl.env("NIXOS_OZONE_WL", "1")
 hl.env("GTK_USE_PORTAL", "1")
-hl.env("GDK_BACKEND", "wayland")
-hl.env("QT_QPA_PLATFORM", "wayland")
-hl.env("SDL_VIDEODRIVER", "wayland")
+
+-- GUI Toolkits
+hl.env("GDK_BACKEND", "wayland,x11,*")
+-- hl.env("SDL_VIDEODRIVER", "wayland")
+hl.env("SDL_VIDEODRIVER", "x11")
+hl.env("CLUTTER_BACKEND", "wayland")
+
 hl.env("ELECTRON_ENABLE_STACK_DUMPING", "true")
 hl.env("ELECTRON_NO_ATTACH_CONSOLE", "true")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
@@ -45,15 +49,18 @@ hl.env("XCURSOR_THEME", "BreezeX-RosePine-Linux")
 hl.env("XCURSOR_SIZE", "18")
 hl.env("GTK_THEME_VARIANT", "dark")
 hl.env("GDK_SCALE", "2")
+
+--  QT
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("QT_QPA_PLATFORM", "wayland") -- xcb breaks some things
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
-hl.env("CLUTTER_BACKEND", "wayland")
+
 hl.env("FREE_SOUNDS", "/run/current-system/sw/share/sounds/freedesktop/stereo/")
 hl.env("PIC_DEFAULT_DIR", os.getenv("HOME") .. "/Pictures/Screenshots")
 hl.env("VID_DEFAULT_DIR", os.getenv("HOME") .. "/Videos/Screencasts")
 hl.env("BEMOJI_PICKER_CMD", "rofi -dmenu -config ~/.config/rofi/emoji-grid.rasi")
-hl.env("HYPRSHELL_NO_USE_PLUGIN", "true")
+-- hl.env("HYPRSHELL_NO_USE_PLUGIN", "true")
 
 ---- -------------------
 ---- LOOK AND FEEL ----
