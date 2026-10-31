@@ -362,7 +362,19 @@ hl.window_rule({
   -- no_initial_focus = true
 })
 
-hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, float = true })
+hl.window_rule({
+  match = { class = "^xdg-desktop-portal-gtk$" },
+  float = true,
+  -- size = "70% 70%",
+  move = {
+    "(monitor_w - window_w) / 2",
+    "48"
+  },
+  border_color = "rgba(" .. kurokula.BLUE_LIGHT ..
+      "84)",
+  center = true
+})
+
 hl.window_rule({ match = { class = "^(steam)$" }, border_size = 0 })
 hl.window_rule({ match = { class = "(wofi|rofi)" }, border_size = 0 })
 
